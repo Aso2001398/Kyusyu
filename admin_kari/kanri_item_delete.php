@@ -20,7 +20,7 @@ if (!isset($_SESSION["login"])) {
     <span class="title_1">  <h1>商品消去</h1> </span>
 </div>
 <div class="a1">
-<p>商品ID</p>
+<p>商品IDd</p>
 </div>
 <div class="item_delete">
     <input type="number" name="item_id" min="0">
