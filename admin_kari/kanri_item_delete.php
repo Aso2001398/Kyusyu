@@ -1,13 +1,3 @@
-<?php
-//セッションを使うことを宣言
-session_start();
-
-//ログインされていない場合は強制的にログインページにリダイレクト
-if (!isset($_SESSION["login"])) {
-    header("Location: kanri_login.php");
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +10,7 @@ if (!isset($_SESSION["login"])) {
     <span class="title_1">  <h1>商品消去</h1> </span>
 </div>
 <div class="a1">
-<p>商品IDd</p>
+<p>商品ID</p>
 </div>
 <div class="item_delete">
     <input type="number" name="item_id" min="0">
