@@ -1,3 +1,14 @@
+<?php
+//セッションを使うことを宣言
+session_start();
+
+//ログインされていない場合は強制的にログインページにリダイレクト
+if (!isset($_SESSION["login"])) {
+    header("Location: kanri_login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
