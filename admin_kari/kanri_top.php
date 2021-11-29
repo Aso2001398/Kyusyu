@@ -3,10 +3,10 @@
 session_start();
 
 //ログインされていない場合は強制的にログインページにリダイレクト
-if (!isset($_SESSION["login"])) {
+/*if (!isset($_SESSION["login"])) {
     header("Location: kanri_login.php");
     exit();
-}
+}*/
 ?>
 
 <!DOCTYPE html>
