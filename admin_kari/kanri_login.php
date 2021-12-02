@@ -13,11 +13,11 @@ catch (PDOException $e) {
 }
 
 //ログイン状態の場合ログイン後のページにリダイレクト
-if (isset($_SESSION["login"])) {
+/*if (isset($_SESSION["login"])) {
     session_regenerate_id(TRUE);
     header("Location: kanri_top.php");
     exit();
-}
+}*/
 
 //postされて来なかったとき
 if (count($_POST) === 0) {
@@ -45,16 +45,21 @@ else {
 
         //検索したユーザー名に対してパスワードが正しいかを検証
         //正しくないとき
-        if ($result['password']!=$_POST['pass']) {
+        try {
+            if ($result['password']!=$_POST['pass']) {
+                throw new Exception();
+            }
+            //正しいとき
+            else {
+                session_regenerate_id(TRUE); //セッションidを再発行
+                $_SESSION["login"] = $_POST['id']; //セッションにログイン情報を登録
+                header("Location: kanri_top.php"); //ログイン後のページにリダイレクト
+                exit();
+            }
+        }catch (Exception $e){
             $message="ユーザー名かパスワードが違います";
         }
-        //正しいとき
-        else {
-            session_regenerate_id(TRUE); //セッションidを再発行
-            $_SESSION["login"] = $_POST['id']; //セッションにログイン情報を登録
-            header("Location: kanri_top.php"); //ログイン後のページにリダイレクト
-            exit();
-        }
+
     }
 }
 
@@ -76,7 +81,7 @@ $message = htmlspecialchars($message);
     <form action="kanri_login.php" method="post">
     <h2>管理者ログイン</h2>
     <p>
-        <input type="email" name="id"  class="email1" placeholder="メールアドレス">
+        <input type="text" name="id"  class="email1" placeholder="id">
     </p>
     <p>
         <input type="password" name="pass" class="email1" placeholder="パスワード">

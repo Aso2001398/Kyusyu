@@ -29,6 +29,8 @@ session_start();
 <div class="wrapper">
     <div class="box1">
 <div class="item">
+
+    <form action="kanri_item_input_result.php" method="post">
     <p>都道府県　ID</p>
     <p>
         <select name="pref">
@@ -53,7 +55,7 @@ session_start();
     </p>
     <p>個数</p>
     <p>
-        <input type="number" name="number" min="0"  >
+        <input type="number" name="stock" min="0"  >
     </p>
     <div class="ItemData">
     <p>商品説明</p>
@@ -69,7 +71,7 @@ session_start();
         <div class="img">
         <p>商品写真</p>
         <p>
-            <input type="file" name="example" accept="image/jpeg, image/png">
+            <input type="file" name="image_url" accept="image/jpeg, image/png">
         </p>
         </div>
 
@@ -80,12 +82,10 @@ session_start();
         <input type="submit" name="button" value="商品を追加する">
     </p>
     </div>
+    </form>
 </div>
 <br><br>
 <p class="box"> </p>
-
-
-
 </body>
 </head>
 </html>
