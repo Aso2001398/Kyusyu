@@ -1,7 +1,7 @@
 <?php
 try {
     $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
-                    dbname=LAA1290554-kyusyu;charser=utf8',
+                    dbname=LAA1290554-kankou;charser=utf8',
         'LAA1290554','1341398com');
 }
 catch (PDOException $e) {

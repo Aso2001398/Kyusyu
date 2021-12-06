@@ -13,12 +13,34 @@
 <p>商品ID</p>
 </div>
 <div class="item_delete">
+    <form action="item_delete.php" method="post">
     <input type="number" name="item_id" min="0">
 
-<button type="button" name="delete">消去</button>
+    <button type="button" name="delete">消去</button>
+    </form>
 </div>
     <p class="box"> </p>
 <div class="a2">
+    <?php
+    try {
+        $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
+                    dbname=LAA1290554-kankou;charser=utf8',
+            'LAA1290554','1341398com');
+    }
+    catch (PDOException $e) {
+        exit ('データベースエラー');
+    }
+
+    foreach ($pdo->query('select * from item') as $row) {
+        echo '<p>';
+        echo $row['song_id'], ' :  ';
+        echo $row['song_name'], ' : ';
+        echo $row['singer'];
+        echo'</p>';
+    }
+
+    $pdo = null;
+    ?>
 <p>
 <input type="button" value="更新" onclick="koshin()">
 </p>
