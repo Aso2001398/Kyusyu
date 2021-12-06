@@ -86,6 +86,28 @@ session_start();
 </div>
 <br><br>
 <p class="box"> </p>
+名前 : 値段 : 在庫 : 画像 : 説明 : 県名
+<?php
+try {
+    $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
+                    dbname=LAA1290554-kyusyu;charser=utf8',
+        'LAA1290554','1234');
+}
+catch (PDOException $e) {
+    exit ('データベースエラー');
+}
+
+foreach ($pdo->query('select * from item') as $row) {
+    echo '<p>';
+    echo $row['item_name'], ' :  ';
+    echo $row['price'], ' : ';
+    echo $row['stock'], ' : ';
+    echo $row['image_url'], ' : <br>';
+    echo $row['item_data'], ' : <br>';
+    echo $row['area'];
+    echo'</p>';
+}
+?>
 </body>
 </head>
 </html>

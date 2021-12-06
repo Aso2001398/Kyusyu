@@ -6,7 +6,7 @@ session_start();
 try {
     $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
                     dbname=LAA1290554-kyusyu;charser=utf8',
-        'LAA1290554','1341398com');
+        'LAA1290554','1234');
 }
 catch (PDOException $e) {
     exit ('データベースエラー');
