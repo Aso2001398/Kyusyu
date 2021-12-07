@@ -51,7 +51,7 @@ function setDG(n)
     </li>
 </ul>
 <div class="picture1">
-    <img id="image_change" src="img/fukuoka/mozikouretoro.jpg"  width="1860" height="900">
+    <img id="image_change" src="img/fukuoka/mozikouretoro.jpg"  width="1700" height="900">
 </div>
 <script type="text/javascript">
     img = new Array("img/fukuoka/mozikouretoro.jpg","img/fukuoka/shiraitonotaki.jpg","img/fukuoka/syounyuudou2%20(1).jpg"); //*(1)
