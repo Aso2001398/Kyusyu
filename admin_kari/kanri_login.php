@@ -35,12 +35,13 @@ else {
         //post送信されてきたユーザー名がデータベースにあるか検索
         try {
             $stmt = $pdo -> prepare('SELECT * FROM admin WHERE admin_id=?');
-            $stmt -> bindParam(1, $_POST['id'], PDO::PARAM_STR, 10);
+            $stmt -> bindValue(1, $_POST['id'], PDO::PARAM_STR);
             $stmt -> execute();
             $result = $stmt -> fetch(PDO::FETCH_ASSOC);
         }
         catch (PDOException $e) {
-            exit('データベースエラー');
+            $message = '指定したIDは存在しません';
+            exit;
         }
 
         //検索したユーザー名に対してパスワードが正しいかを検証

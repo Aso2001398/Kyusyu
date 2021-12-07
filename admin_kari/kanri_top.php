@@ -71,7 +71,7 @@ session_start();
         <div class="img">
         <p>商品写真</p>
         <p>
-            <input type="file" name="image_url" accept="image/jpeg, image/png">
+            <input type="file" name="image_name" accept="image/jpeg, image/png">
         </p>
         </div>
 

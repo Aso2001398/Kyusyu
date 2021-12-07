@@ -7,24 +7,29 @@ try {
 catch (PDOException $e) {
     exit ('データベースエラー');
 }
-$name = $pdo->prepare('select item_name,stock from item');
 
 $up = false;
-foreach ($pdo->prepare('select item_name,stock from item') as $ame){
-    if($ame['item_name'] == $_POST['item_name']){
-        $sql=$pdo->prepare('update item set price=?, stock=?, image_url=?, item_data=?, area=?');
-        $sql->bindValue(1,$_POST['price'], PDO::PARAM_STR);
-        $sql->bindValue(2,$ame['stock'] + $_POST['stock'], PDO::PARAM_STR);
-        $sql->bindValue(3,$_POST['image_url'], PDO::PARAM_STR);
-        $sql->bindValue(4,$_POST['item_data'], PDO::PARAM_STR);
-        $sql->bindValue(5,$_POST['pref'], PDO::PARAM_STR);
-        if($sql->rowCount()==1){
-            echo '更新に成功しました。<br>下のボタンを押してください。';
-        }else{
-            echo '更新に失敗しました';
-        }
-        $up = true;
-        break;
+try {
+    $stmt = $pdo -> prepare('SELECT * FROM admin WHERE admin_id=?');
+    $stmt -> bindValue(1, $_POST['id'], PDO::PARAM_STR);
+    $stmt -> execute();
+    $result = $stmt -> fetch(PDO::FETCH_ASSOC);
+    $up = true;
+}
+catch (PDOException $e) {
+
+}
+if($up && isset($result['id'])){
+    $sql=$pdo->prepare('update item set price=?, stock=?, image_url=?, item_data=?, area=?');
+    $sql->bindValue(1,$_POST['price'], PDO::PARAM_STR);
+    $sql->bindValue(2,$result['stock'] + $_POST['stock'], PDO::PARAM_STR);
+    $sql->bindValue(3,$_POST['image_url'], PDO::PARAM_STR);
+    $sql->bindValue(4,$_POST['item_data'], PDO::PARAM_STR);
+    $sql->bindValue(5,$_POST['pref'], PDO::PARAM_STR);
+    if($sql->rowCount()==1){
+        echo '更新に成功しました。<br>下のボタンを押してください。';
+    }else {
+        echo '更新に失敗しました';
     }
 }
 if(!$up){
@@ -33,7 +38,7 @@ if(!$up){
     $sql->bindValue(1,$_POST['item_name'], PDO::PARAM_STR);
     $sql->bindValue(2,$_POST['price'], PDO::PARAM_STR);
     $sql->bindValue(3,$_POST['stock'], PDO::PARAM_STR);
-    $sql->bindValue(4,$_POST['image_url'], PDO::PARAM_STR);
+    $sql->bindValue(4,$_POST['image_name'], PDO::PARAM_STR);
     $sql->bindValue(5,$_POST['item_data'], PDO::PARAM_STR);
     $sql->bindValue(6,$_POST['pref'], PDO::PARAM_STR);
     $sql->execute();
