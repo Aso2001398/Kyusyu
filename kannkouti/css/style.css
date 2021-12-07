@@ -1,16 +1,13 @@
 @media screen and (max-width: 479px) { /*ウィンドウ幅が最大479pxまでの場合に適用*/
     #menu-bg {
-        background-color: #00FF00; /*緑色*/
     }
 }
 @media screen and (max-width: 767px) { /*ウィンドウ幅が最大767pxまでの場合に適用*/
     #menu-bg {
-        background-color: #FF0000; /*赤色*/
     }
 }
 @media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
     #menu-bg {
-        background-color: #00FFFF; /*青色*/
     }
 }
 .original {
@@ -80,7 +77,7 @@ font-size: 20px;
     cursor       : pointer;              /* カーソル形状 */
     transition:all 1s ease-in-out;
     position: absolute;
-    left: 1600px;
+    left: 1450px;
     top: 400px;
 }
 .change2{
@@ -92,7 +89,7 @@ font-size: 20px;
     cursor       : pointer;              /* カーソル形状 */
     transition:all 1s ease-in-out;
     position: absolute;
-    left: 1600px;
+    left: 1450px;
     top: 700px;
 }
 .change3{
@@ -104,7 +101,7 @@ font-size: 20px;
     cursor       : pointer;              /* カーソル形状 */
     transition:all 1s ease-in-out;
     position: absolute;
-    left: 1600px;
+    left: 1450px;
     top: 1000px;
 }
 .picture1{
@@ -146,12 +143,6 @@ font-size: 20px;
 }
 .spot-list{
     list-style-type: none;
-}
-.change1{
-    opacity: .5;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .spot-text{
     display       : inline-block;
