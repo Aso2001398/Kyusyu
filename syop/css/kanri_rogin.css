@@ -1,0 +1,33 @@
+
+body{
+ background-color: gray;
+}
+.img{
+ text-align: center;
+}
+.login{
+ width: 422px;
+ height: 380px;
+ background: #fff;
+ position: absolute;
+ top: 150px;
+ right: 0;
+ left: 0;
+ margin: auto;
+ text-align: center;
+
+}
+
+.email1{
+ width: 200px;
+ height: 20px;
+}
+.btn{
+ width: 364px;
+ height: 40px;
+ background: #4892ff;
+ border: 1px solid #326dcc;
+ color: #fff;
+ font-size: 16px;
+ text-align: center;
+}

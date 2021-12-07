@@ -1,0 +1,84 @@
+.parent {
+    text-align: center;
+}
+/*商品消去ボタン*/
+div.btn {
+    text-align: right;
+}
+p.box {
+    border-bottom: 1px solid black;
+}
+
+.button {
+
+    display       : inline-block;
+    font-size     : 14pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 37px;   /* 余白       */
+    background    : #ffffff;     /* 背景色     */
+    color         : #000000;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+}
+.button:hover {
+    opacity       : 1;           /* カーソル時透明度 */
+}
+.item {
+    margin-left: 50px;
+    font-size: 13pt;
+    line-height: 5px;
+}
+textarea {
+    resize: none;
+    width: 200px;
+    height: 100px;
+
+
+    /*resize: none;
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid black;
+*/
+
+}
+.wrapper {
+    width: 100vw;
+    height: 50vh;
+}
+
+.box1 {
+    display: inline-block;
+
+    width: 45%;
+    height: 90%;
+}
+
+.divider {
+    position: relative;
+    left: 50px;
+    display: inline-block;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 110%;
+
+}
+
+.box2 {
+    display: inline-block;
+    width: 50%;
+    height: 90%;
+}
+.img{
+    font-size: 13pt;
+    line-height: 5px;
+    float: right;
+
+}
+
+.add_button{
+    margin-right: 50px;
+    text-align: right;
+}
