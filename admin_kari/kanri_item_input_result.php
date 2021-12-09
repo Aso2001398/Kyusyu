@@ -1,4 +1,8 @@
 <?php
+if(!isset($_POST{'item_name'})){
+header("Location:kanri_top.php");
+exit();
+}
 try {
     $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
                     dbname=LAA1290554-kyusyu;charser=utf8',
@@ -7,32 +11,48 @@ try {
 catch (PDOException $e) {
     exit ('データベースエラー');
 }
-
+//アップデートが必要かどうか。すべてのアイテム名を検索し一致するものがあればアップデートを実行する
 $up = false;
-try {
-    $stmt = $pdo -> prepare('SELECT * FROM admin WHERE admin_id=?');
-    $stmt -> bindValue(1, $_POST['id'], PDO::PARAM_STR);
-    $stmt -> execute();
-    $result = $stmt -> fetch(PDO::FETCH_ASSOC);
-    $up = true;
-}
-catch (PDOException $e) {
+//検索が必要
+$item_check = true;
 
+$ame=$pdo -> prepare('SELECT * FROM item');
+$ame -> execute();
+if($ame['delete_check']){
+    $dlt=$pdo->prepare('delete from item where item_name');
+    $dlt->bindValue(1,'item_name');
+    $dlt->execute();
+    $item_check = false;
 }
-if($up && isset($result['id'])){
-    $sql=$pdo->prepare('update item set price=?, stock=?, image_url=?, item_data=?, area=?');
+if($item_check){
+    foreach ($ame as $ae){
+        if($ae['item_name'] == $_POST['item_name']){
+            $up=true;
+            break;
+        }
+    }
+}
+
+if($up){
+    $name=$pdo->prepare('SELECT * FROM item where item_name=?');
+    $name->bindValue(1,$_POST['item_name'], PDO::PARAM_STR);
+    $name->execute();
+    $result = $name->fetch(PDO::FETCH_ASSOC);
+    print_r($result);
+    $sql=$pdo->prepare('update item set price=?, stock=?, image_url=?, item_data=?, area=? where item_name=?');
     $sql->bindValue(1,$_POST['price'], PDO::PARAM_STR);
-    $sql->bindValue(2,$result['stock'] + $_POST['stock'], PDO::PARAM_STR);
-    $sql->bindValue(3,$_POST['image_url'], PDO::PARAM_STR);
+    $sql->bindValue(2,$_POST['stock'], PDO::PARAM_STR);
+    $sql->bindValue(3,$_POST['image_name'], PDO::PARAM_STR);
     $sql->bindValue(4,$_POST['item_data'], PDO::PARAM_STR);
     $sql->bindValue(5,$_POST['pref'], PDO::PARAM_STR);
+    $sql->bindValue(6,$_POST['item_name'], PDO::PARAM_STR);
+    $sql -> execute();
     if($sql->rowCount()==1){
         echo '更新に成功しました。<br>下のボタンを押してください。';
     }else {
         echo '更新に失敗しました';
     }
-}
-if(!$up){
+}else{
     $sql=$pdo->prepare('INSERT INTO item(item_name,price,stock,image_url,item_data,area) 
                           VALUES(?,?,?,?,?,?)');
     $sql->bindValue(1,$_POST['item_name'], PDO::PARAM_STR);

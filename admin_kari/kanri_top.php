@@ -33,7 +33,7 @@ session_start();
     <form action="kanri_item_input_result.php" method="post">
     <p>都道府県　ID</p>
     <p>
-        <select name="pref">
+        <select name="pref" required>
             <option value="">選択してください</option>
             <option value="福岡県">福岡県 1</option>
             <option value="佐賀県">佐賀県 2</option>
@@ -47,21 +47,20 @@ session_start();
     </p>
     <p>商品名</p>
     <p>
-        <input type="text" name="item_name" required>
+        <input type="text" name="item_name" value="1" required>
     </p>
     <p>値段</p>
     <p>
-        <input type="tel" name="price" required>
+        <input type="tel" name="price" value="1" required>
     </p>
     <p>個数</p>
     <p>
-        <input type="number" name="stock" min="0"  >
+        <input type="number" name="stock" min="0" value="1" required>
     </p>
     <div class="ItemData">
     <p>商品説明</p>
     <p>
-        <textarea name="item_data">
-        </textarea>
+        <textarea name="item_data" required></textarea>
     </p>
     </div>
 </div>
@@ -71,7 +70,7 @@ session_start();
         <div class="img">
         <p>商品写真</p>
         <p>
-            <input type="file" name="image_name" accept="image/jpeg, image/png">
+            <input type="file" name="image_name" accept="image/jpeg, image/png" required>
         </p>
         </div>
 
@@ -98,14 +97,17 @@ catch (PDOException $e) {
 }
 
 foreach ($pdo->query('select * from item') as $row) {
-    echo '<p>';
-    echo $row['item_name'], ' :  ';
-    echo $row['price'], ' : ';
-    echo $row['stock'], ' : ';
-    echo $row['image_url'], ' : <br>';
-    echo $row['item_data'], ' : <br>';
-    echo $row['area'];
-    echo'</p>';
+    if(!$row['delete_check']){
+        echo '<p>';
+        echo $row['item_id'], ' : ';
+        echo $row['item_name'], ' : ';
+        echo $row['price'], ' : ';
+        echo $row['stock'], ' : ';
+        echo $row['image_url'], ' : <br>';
+        echo $row['item_data'], ' : <br>';
+        echo $row['area'];
+        echo'</p>';
+    }
 }
 ?>
 </body>

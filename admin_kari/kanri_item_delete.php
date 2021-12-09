@@ -13,7 +13,7 @@
 <p>商品ID</p>
 </div>
 <div class="item_delete">
-    <form action="item_delete.php" method="post">
+    <form action="kanri_item_delete_result.php" method="post">
     <input type="number" name="item_id" min="0">
 
     <button type="button" name="delete">消去</button>
@@ -24,21 +24,27 @@
     <?php
     try {
         $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
-                    dbname=LAA1290554-kankou;charser=utf8',
-            'LAA1290554','1341398com');
+                    dbname=LAA1290554-kyusyu;charser=utf8',
+            'LAA1290554','1234');
     }
     catch (PDOException $e) {
         exit ('データベースエラー');
     }
 
     foreach ($pdo->query('select * from item') as $row) {
-        echo '<p>';
-        echo $row['song_id'], ' :  ';
-        echo $row['song_name'], ' : ';
-        echo $row['singer'];
-        echo'</p>';
-    }
+        if(!$row['delete_check']){
+            echo '<p>';
+            echo $row['item_id'], ' : ';
+            echo $row['item_name'], ' : ';
+            echo $row['price'], ' : ';
+            echo $row['stock'], ' : ';
+            echo $row['image_url'], ' : <br>';
+            echo $row['item_data'], ' : <br>';
+            echo $row['area'];
+            echo'</p>';
+        }
 
+    }
     $pdo = null;
     ?>
 <p>

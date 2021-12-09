@@ -10,6 +10,11 @@
     #menu-bg {
     }
 }
+
+.picture1 {
+    width: 80%;
+}
+
 .original {
     display: flex;
     align-items: center;
