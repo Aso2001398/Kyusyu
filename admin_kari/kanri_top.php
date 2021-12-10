@@ -30,7 +30,7 @@ session_start();
     <div class="box1">
 <div class="item">
 
-    <form action="kanri_item_input_result.php" method="post">
+    <form action="kanri_item_input_result.php" enctype="multipart/form-data" method="post">
     <p>都道府県　ID</p>
     <p>
         <select name="pref" required>
@@ -103,7 +103,7 @@ foreach ($pdo->query('select * from item') as $row) {
         echo $row['item_name'], ' : ';
         echo $row['price'], ' : ';
         echo $row['stock'], ' : ';
-        echo $row['image_url'], ' : <br>';
+        echo $row['image_name'], ' : <br>';
         echo $row['item_data'], ' : <br>';
         echo $row['area'];
         echo'</p>';

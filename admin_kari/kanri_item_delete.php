@@ -38,7 +38,7 @@
             echo $row['item_name'], ' : ';
             echo $row['price'], ' : ';
             echo $row['stock'], ' : ';
-            echo $row['image_url'], ' : <br>';
+            echo $row['image_name'], ' : <br>';
             echo $row['item_data'], ' : <br>';
             echo $row['area'];
             echo'</p>';
