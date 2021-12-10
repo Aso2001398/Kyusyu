@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/企業連携.iml" filepath="$PROJECT_DIR$/.idea/企業連携.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/syop.iml" filepath="$PROJECT_DIR$/.idea/syop.iml" />
     </modules>
   </component>
 </project>

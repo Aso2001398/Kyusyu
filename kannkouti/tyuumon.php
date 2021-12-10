@@ -24,7 +24,7 @@
 <p>名前</p>
 </div>
 <div class="check1">
-    <img src="img/fukuoka/mozikouretoro.jpg" class="check4" width="100px" height="100px">
+    <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="check4" width="100px" height="100px">
     <div class="check5">
     <p>商品名</p>
     <p>値段</p>

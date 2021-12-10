@@ -51,13 +51,13 @@
     <li>
         <div class="change1">
         </div>
-        <img src="img/okinawa/mannzamou2.jpg" class="change" onclick="setBG()" width="150" height="217" alt="">
-        <img src="img/okinawa/sikinaenn.jpeg" class="change2" onclick="setCG(2)" width="150" height="217" alt="">
-        <img src="img/okinawa/ueguu.jpg" class="change3" onclick="setDG(3)" width="150" height="217" alt="">
+        <img src="../../syop/img/okinawa/mannzamou2.jpg" class="change" onclick="setBG()" width="150" height="217" alt="">
+        <img src="../../syop/img/okinawa/sikinaenn.jpeg" class="change2" onclick="setCG(2)" width="150" height="217" alt="">
+        <img src="../../syop/img/okinawa/ueguu.jpg" class="change3" onclick="setDG(3)" width="150" height="217" alt="">
     </li>
 </ul>
 <div class="picture1">
-    <img id="image_change" src="img/okinawa/mannzamou2.jpg" width="1860" height="900">
+    <img id="image_change" src="../../syop/img/okinawa/mannzamou2.jpg" width="1860" height="900">
 </div>
 <script type="text/javascript">
     img = new Array("img/okinawa/mannzamou2.jpg","img/okinawa/sikinaenn.jpeg","img/okinawa/ueguu.jpg"); //*(1)
@@ -90,7 +90,7 @@
                     福岡県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
+                <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
             </div>
         </a>
         <a href="saga.php" class="kannkouti">
@@ -99,7 +99,7 @@
                     佐賀県
                 </h1>
                 <hr width="99%" color="black" size="0">
-                <img src="img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
+                <img src="../../syop/img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
             </div>
         </a>
         <a href="nagasaki.php" class="kannkouti">
@@ -108,7 +108,7 @@
                     長崎県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
+                <img src="../../syop/img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
             </div>
         </a>
         <a href="kumamoto.php" class="kannkouti">
@@ -117,7 +117,7 @@
                     熊本県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
+                <img src="../../syop/img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
             </div>
         </a>
         <a href="ooita.php" class="kannkouti">
@@ -126,7 +126,7 @@
                     大分県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
+                <img src="../../syop/img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
             </div>
         </a>
         <a href="miyazaki.php" class="kannkouti1">
@@ -135,7 +135,7 @@
                     宮崎県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
+                <img src="../../syop/img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
             </div>
         </a>
         <a href="kagosima.php" class="kannkouti1">
@@ -144,7 +144,7 @@
                     鹿児島県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
+                <img src="../../syop/img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
             </div>
         </a>
         <a href="okinawa.php" class="kannkouti1">
@@ -153,7 +153,7 @@
                     沖縄県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
+                <img src="../../syop/img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
             </div>
         </a>
     </li>

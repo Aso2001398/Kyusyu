@@ -124,6 +124,7 @@ margin-right: 500px;
 
     /* [リンクテキストのアンダーラインを非表示にする] */
     text-decoration: none;
+    border: solid 2px #444444;
 }
 .float_box .image
 {
@@ -133,7 +134,7 @@ margin-right: 500px;
     /* [画像が真ん中に来るようにする] */
     /* [画像と文字の間に余白を入れる] */
     display: block;
-    margin: 0 auto 5px;
+    margin: 5px auto 5px;
 }
 .float_box .name
 {
@@ -145,9 +146,14 @@ margin-right: 500px;
 
     /* [商品名の文字をグレーにする] */
     color: #777;
+    margin-left: 50px;
+}
+.float_box .item_date{
+    margin-left: 50px;
 }
 .float_box .price
 {
     /* [価格を太文字にする] */
     font-weight: bold;
+    margin-left: 50px;
 }
