@@ -10,9 +10,8 @@
 
 <body>
 <div class="header">
-  <div class="back_button">
+
     <button type="button"  class="original" onclick=history.back()>←戻る</button>
-  </div>
   <!--<a href="" class="btn btn-border">戻る</a>-->
 
   <div class="img">

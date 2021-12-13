@@ -12,7 +12,7 @@
     <button type="button"  class="original" onclick=history.back()>←戻る</button>
 
     <div class="img">
-        <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="50" >
+        <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="100" >
     </div>
     <div class="search">
         <form action="" method="post">
@@ -21,16 +21,16 @@
         </form>
     </div>
     <div class="img2">
-        <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+        <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
     <div class="img3">
-        <a href="" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
+        <a href="../EC/Card.php" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
 <div class="transition">
-    <p class="top">トップページ</p>
-    <p class="spot">観光スポット</p>
-    <p class="miyage">お土産一覧</p>
+        <a href="../syop/top.php"><p class="top">トップページ</p></a>
+        <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
+        <a href="../syop/syohin.php"><p class="miyage">お土産一覧</p></a>
 </div>
 
 <div class="info warp">
