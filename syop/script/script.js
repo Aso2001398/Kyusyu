@@ -1,4 +1,3 @@
 function koshin(){
     location.reload();
 }
-

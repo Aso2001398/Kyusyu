@@ -46,6 +46,14 @@ if(isset($_SESSION["login_account"])){
                 $ins->bindValue(4, date("Y-m-d"), PDO::PARAM_STR);
                 $ins->bindValue(5, true, PDO::PARAM_STR);
                 $ins->execute();
+                session_regenerate_id(TRUE); //セッションidを再発行
+                $_SESSION["user_id"] = $ail['user_id'];
+                $_SESSION["mail"] = $ail['mail']; //セッションにログイン情報を登録
+                $_SESSION["name"] = $ail['user_name'];
+                $_SESSION["address"] = $ail['address'];
+                $_SESSION['login'] = true;
+                $_SESSION['message'] = "ようこそ、{$ail['user_name']}さん";
+                $_SESSION['re'] = 'a';
             }
         }
     }

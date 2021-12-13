@@ -2,7 +2,7 @@
 //セッション宣言
 session_start();
 //セッションの中身確認（削除）
-//print_r($_SESSION);
+print_r($_SESSION);
 if(isset($_SESSION['re'])){
     echo <<<EOM
         <script type="text/javascript">
@@ -55,11 +55,21 @@ foreach ($name as $row){
 <body>
     <div class="header">
         <div class="img">
-            <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="50" >
+            <img src="img/logo1.png" id="change" alt="" title="九州旅行記" width="150" height="50" >
         </div>
 
         <div class="img2">
-            <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+            <a href="../login/kaiin-login.php" ><img src="img/login.png" onload="change()" alt="" id="mypage" title="ログインアイコン" width="80" height="35" ></a>
+            <script>
+                function change(){
+
+                    if(<?php echo isset($_SESSION['login']) ?>){
+                        document.getElementById("mypage").src = "img/mypageglogo.png";
+                    }
+                }
+
+
+            </script>
         </div>
     </div><!--ヘッダー終わり-->
     <p class="box"> </p>
@@ -261,6 +271,7 @@ foreach ($name as $row){
             return false;
         });
     });</script>
-
+    <script src="script/script.js"></script>
 </body>
+
 </html>

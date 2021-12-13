@@ -79,9 +79,30 @@ $pdo = DB_Connect();
         </div>
     </div>
     <div class="shohin_shousai">
+        <?php
+        $item=$pdo -> prepare('SELECT * FROM item order where item_name = :name');
+        $item->bindValue(':name', $_POST['item_name'],PDO::PARAM_STR);
+        $item->execute();
+        $result = $item->fetch(PDO::FETCH_ASSOC);
+        print_r($result);
+        echo <<<EOM
+         <img src="../admin_kari/img/item/{$result['image_name']}" class="item_img"alt="" title="" width="700" height="400" >
+        <div class="item_date_box">
+            <p class="item_name">{print_r($result)}</p>
+            <p class="price">&yen;1,980</p>
+            <p class="zai">在庫[
+                10
+                ]</p>
+            <p class="item_date" >おいしいおいしいおいしい</p>
+            <div class="select">
+                <a href="../EC/Card.php"> カートに入れる</a>
+                <br>
 
-
+            </div>
         </div>
+        EOM;
+        ?>
+
         <br><br>
         <p class="box"> </p>
         <p class="kaan">関連商品</p>
