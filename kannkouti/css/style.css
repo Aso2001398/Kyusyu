@@ -82,8 +82,8 @@ font-size: 20px;
     cursor       : pointer;              /* カーソル形状 */
     transition:all 1s ease-in-out;
     position: absolute;
-    left: 1450px;
-    top: 400px;
+    left: 1300px;
+    top: 150px;
 }
 .change2{
     display      : inline-block;
@@ -94,8 +94,8 @@ font-size: 20px;
     cursor       : pointer;              /* カーソル形状 */
     transition:all 1s ease-in-out;
     position: absolute;
-    left: 1450px;
-    top: 700px;
+    left: 1300px;
+    top: 450px;
 }
 .change3{
     display      : inline-block;
@@ -106,8 +106,8 @@ font-size: 20px;
     cursor       : pointer;              /* カーソル形状 */
     transition:all 1s ease-in-out;
     position: absolute;
-    left: 1450px;
-    top: 1000px;
+    left: 1300px;
+    top: 750px;
 }
 .picture1{
     top: 120px;
@@ -123,6 +123,7 @@ font-size: 20px;
     position: relative;
     left: 50px;
     top: 100px;
+    text-decoration: none;
 }
 .kannkouti1{
     margin-left: 60px;

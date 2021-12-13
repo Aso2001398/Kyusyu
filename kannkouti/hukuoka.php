@@ -52,7 +52,7 @@ function setDG(n)
     </li>
 </ul>
 <div class="picture1">
-    <img src="../syop/img/fukuoka/mozikouretoro.jpg" id="image_change" width="1200" height="900">
+    <img src="../syop/img/fukuoka/mozikouretoro.jpg" id="image_change" width="1500" height="1200">
 </div>
 <script type="text/javascript">
     img = new Array("img/fukuoka/mozikouretoro.jpg","img/fukuoka/shiraitonotaki.jpg","img/fukuoka/syounyuudou2%20(1).jpg"); //*(1)
@@ -93,7 +93,7 @@ function setDG(n)
                     佐賀県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
+                <img src="../syop/img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
             </div>
         </a>
         <a href="nagasaki.php" class="kannkouti">
@@ -102,7 +102,7 @@ function setDG(n)
                     長崎県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
+                <img src="../syop/img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
             </div>
         </a>
         <a href="kumamoto.php" class="kannkouti">
@@ -111,7 +111,7 @@ function setDG(n)
                     熊本県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
+                <img src="../syop/img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
             </div>
         </a>
         <a href="ooita.php" class="kannkouti">
@@ -120,7 +120,7 @@ function setDG(n)
                     大分県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
+                <img src="../syop/img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
             </div>
         </a>
         <a href="miyazaki.php" class="kannkouti1">
@@ -129,7 +129,7 @@ function setDG(n)
                     宮崎県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
+                <img src="../syop/img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
             </div>
         </a>
         <a href="kagosima.php" class="kannkouti1">
@@ -138,7 +138,7 @@ function setDG(n)
                     鹿児島県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
+                <img src="../syop/img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
             </div>
         </a>
         <a href="okinawa.php" class="kannkouti1">
@@ -147,7 +147,7 @@ function setDG(n)
                     沖縄県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
+                <img src="../syop/img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
             </div>
         </a>
     </li>
