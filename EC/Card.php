@@ -12,7 +12,7 @@
     <button type="button"  class="original" onclick=history.back()>←戻る</button>
 
     <div class="img">
-        <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="100" >
+        <img src="../syop/img/logo1.png" alt="" title="九州旅行記" width="120" height="60" >
     </div>
     <div class="search">
         <form action="" method="post">
@@ -53,7 +53,7 @@
             <br>
             <br>:￥599</p>
 
-        <<button class="butt">購入に進む</button>
+        <button class="butt">購入に進む</button>
     </div>
 </form>
 </body>
