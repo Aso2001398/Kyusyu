@@ -7,13 +7,16 @@ session_start();
     header("Location: kanri_login.php");
     exit();
 }*/
+
+//ローカルライブラリに接続
+require_once '../method.php';
 ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>a</title>
+    <title>top</title>
     <link rel="stylesheet" href="./css/kanri.css">
 <body>
 <button type="button" onclick=history.back()>←戻る</button>
@@ -70,7 +73,7 @@ session_start();
         <div class="img">
         <p>商品写真</p>
         <p>
-            <input type="file" name="image_name" accept="image/jpeg, image/png" required>
+            <input type="file" name="image_name" required>
         </p>
         </div>
 
@@ -85,7 +88,7 @@ session_start();
 </div>
 <br><br>
 <p class="box"> </p>
-名前 : 値段 : 在庫 : 画像 : 説明 : 県名
+ID : 名前 : 値段 : 在庫 : 画像 : 説明 : 県名
 <?php
 try {
     $pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
@@ -96,19 +99,8 @@ catch (PDOException $e) {
     exit ('データベースエラー');
 }
 
-foreach ($pdo->query('select * from item') as $row) {
-    if(!$row['delete_check']){
-        echo '<p>';
-        echo $row['item_id'], ' : ';
-        echo $row['item_name'], ' : ';
-        echo $row['price'], ' : ';
-        echo $row['stock'], ' : ';
-        echo $row['image_name'], ' : <br>';
-        echo $row['item_data'], ' : <br>';
-        echo $row['area'];
-        echo'</p>';
-    }
-}
+//商品テーブルを全て表示
+Display_All($pdo);
 ?>
 </body>
 </head>

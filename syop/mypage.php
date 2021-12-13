@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -17,6 +15,8 @@
     <p id="account_1">アカウント情報</p>
     <p>名前</p>
     <p>メールアドレス</p>
+    <a href="../login/logout.php">ログアウト</a>
+    <a href="../login/taikai.php">退会</a>
 </div>
 <div class="button_rireki">
 </div>

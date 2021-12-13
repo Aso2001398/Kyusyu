@@ -1,0 +1,65 @@
+.nav{
+    width:0px;
+    height:0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.bgDiv{
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+.taikai{
+    width: 800px;
+    height: 600px;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.mokujii{
+    text-align: center;
+    padding:60px;
+    color: #111111;
+}
+.aav{
+    width:0px;
+    height:0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.bbDiv{
+    width: 400px;
+    height: 350px;
+    background:gray;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+}
+input[type="text"] {
+    height: 30px;
+    width: 280px;
+
+}
+.dd{
+    display: inline-block;
+    text-align:left;
+    padding:50px;
+}
+.err{
+    text-align: center;
+}

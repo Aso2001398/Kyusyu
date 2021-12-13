@@ -1,3 +1,31 @@
+<?php
+//セッション宣言
+//セッションの中身確認（削除）
+session_start();
+print_r($_SESSION);
+if(isset($_SESSION['re'])){
+    echo <<<EOM
+        <script type="text/javascript">
+        location.reload();
+        </script>
+    EOM;
+    $_SESSION['re'] = null;
+}
+//ローカルライブラリに接続
+require_once '../method.php';
+if(isset($_SESSION['message'])){
+    echo <<<EOM
+        <script type="text/javascript">
+        window.onload = function (){
+            alert("{$_SESSION['message']}");
+        }
+        </script>
+    EOM;
+    $_SESSION['message'] = null;
+}
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -16,7 +44,7 @@
         </div>
 
         <div class="img2">
-            <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+            <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
         </div>
     </div><!--ヘッダー終わり-->
     <p class="box"> </p>
@@ -152,7 +180,7 @@
             <p>観光地↓</p>
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="">福岡県</a></p>
+                <li><a href="">福岡県</a></li>
                 <li><a href="">佐賀県</a></li>
                 <li><a href="">長崎県</a></li>
                 <li><a href="">熊本県</a></li>
