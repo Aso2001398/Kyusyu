@@ -50,15 +50,15 @@ require_once '../method.php';
     </p>
     <p>商品名</p>
     <p>
-        <input type="text" name="item_name" value="1" required>
+        <input type="text" name="item_name" required>
     </p>
     <p>値段</p>
     <p>
-        <input type="tel" name="price" value="1" required>
+        <input type="tel" name="price" required>
     </p>
     <p>個数</p>
     <p>
-        <input type="number" name="stock" min="0" value="1" required>
+        <input type="number" name="stock" min="0" required>
     </p>
     <div class="ItemData">
     <p>商品説明</p>

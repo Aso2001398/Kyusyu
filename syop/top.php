@@ -26,10 +26,9 @@ $pdo = DB_connect();
 
 echo '<br>';
 
-/*//DBから画像を引っ張ってくる方法　もし鶴乃子を引っ張ってくる時
+//DBから画像を引っ張ってくる方法　もし鶴乃子を引っ張ってくる時
 //itemテーブルの情報を全て引っ張ってくる
-$name=$pdo -> prepare('SELECT * FROM item');
-$name -> execute();
+/*$name=$pdo -> query('SELECT * FROM item');
 //それぞれの配列から名前を取得可能にする
 foreach ($name as $row){
     //自分がほしいnameを持つ商品を探索する
@@ -212,20 +211,35 @@ foreach ($name as $row){
         <div class="float_box">
             <ul>
                 <?php
-                for($i=0;$i<6;$i++){
-                    if($i == 3){
+                $i=0;
+                $size = 'height="100vh"';
+                $items=$pdo -> query('SELECT * FROM item order by item_id desc');
+                foreach ($items as $item){
+                    $data=$item['item_data'];
+                    if($item['delete_check']){
+                        continue;
+                    }
+                    if($i==3){
                         echo '<li></li>';
+                    }
+                    if($i==6){
+                        break;
                     }
                     echo <<<EOM
                         <li> <!-- [▼] アイテム -->
-                            <a href="../syop/syohinsyousai.php">
-                                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                                <p class="name">TURUNOKO</p>
-                                <p class="item_date" >おいしいおいしいおいしい</p>
-                                <p class="price">&yen;1,980</p>
-                            </a>
+                            <form action="../syop/syohinsyousai.php" name="form1" method="post">   
+                                <a href="javascript:form1[{$i}].submit()">
+                                    <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="image">
+                                    <p class="name">{$item['item_name']}</p>
+                                    <p class="item_date" >{$data}</p>
+                                    <p class="price">&yen;{$item['price']}</p>
+                                    
+                                </a>  
+                                <input type="hidden" name="item_name" value="{$item['item_name']}">
+                            </form>
                          </li> <!-- [▲] アイテム -->
                     EOM;
+                    $i++;
                 }
                 ?>
             </ul>

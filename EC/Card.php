@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Card</title>
-    <link rel="icon"  type="image/x-icon" sizes="144*144" href="../card/favicon.ico">
+    <link rel="icon"  type="image/x-icon" sizes="144*144" href="img/favicon.ico">
     <link rel="stylesheet" href="css/Cardstyle.css">
 </head>
 <body>

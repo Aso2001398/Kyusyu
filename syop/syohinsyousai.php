@@ -74,7 +74,7 @@
             <p class="zai">在庫[
                 10
                 ]</p>
-            <p class="item_date" >おいしいおいしいおいしい</p>
+            <p class="item_date" >おいしいおいしいおいしい<?php print_r($_POST) ?></p>
             <div class="select">
                 <a href="../EC/Card.php"> カートに入れる</a>
                 <br>
