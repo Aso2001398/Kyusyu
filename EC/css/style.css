@@ -1,0 +1,71 @@
+.logo{
+    text-align: center;
+}
+.nav{
+    width:0px;
+    height:0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+.bgDiv{
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+.login{
+    width: 422px;
+    height: 480px;
+    background: #fff;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.mokujii{
+
+}
+.username,
+.pwd,
+.newUser{
+    width: 366px;
+    height: 60px;
+    border-bottom: 1px solid #efefef;
+    margin: 0 28px;
+}
+.pwdInp,
+.userInp{
+    width: 320px;
+    height: 25px;
+    margin-top: 18px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+}
+.newUser{
+    border: none;
+    line-height: 58px;
+    color: #3e82bf;
+    font-size: 16px;
+}
+.btn{
+    width: 364px;
+    height: 40px;
+    background: #4892ff;
+    border: 1px solid #326dcc;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 30px;
+}
+.g-signin2{
+    z-index: 3;
+    padding:30px;
+    text-align: center;
+
+}
