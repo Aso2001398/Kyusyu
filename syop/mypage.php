@@ -9,7 +9,7 @@
 <button type="button" onclick=history.back()>←戻る</button>
 
 <div class="img">
-    <img src="img/logo1.png" alt="" title="九州旅行記" width="300" height="200" >
+    <img src="img/logo1.png" alt="" title="九州旅行記" width="180" height="100" >
 </div>
 
 <div class="account">

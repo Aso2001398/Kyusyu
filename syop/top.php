@@ -50,7 +50,7 @@ if(isset($_SESSION['message'])){
     <p class="box"> </p>
     <div class="transition">
         <a href="../syop/top.php"><p class="top">トップページ</p></a>
-        <a href="../kannkouti/hukuoka.php/"><p class="spot">観光スポット</p></a>
+        <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
         <a href="../syop/syohin.html"><p class="miyage">お土産一覧</p></a>
     </div>
     <!--画像-->
