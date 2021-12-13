@@ -5,7 +5,7 @@
       <paths name="lolipop">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/syop" />
+            <mapping deploy="/" local="$PROJECT_DIR$/../Kyusyu/syop" web="/syop" />
           </mappings>
         </serverdata>
       </paths>

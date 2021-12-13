@@ -54,9 +54,9 @@
             <p>観光地↓</p>
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="">福岡県</a></li>
-                <li><a href="">佐賀県</a></li>
-                <li><a href="">長崎県</a></li>
+                <li><a href="kannkouti/hukuoka.php">福岡県</a></li>
+                <li><a href="kannkouti/saga.php">佐賀県</a></li>
+                <li><a href="kankouti/nagasaki.php">長崎県</a></li>
                 <li><a href="">熊本県</a></li>
                 <li><a href="">大分県</a></li>
                 <li><a href="">宮崎県</a></li>

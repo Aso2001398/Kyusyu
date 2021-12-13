@@ -54,14 +54,14 @@
             <p>観光地↓</p>
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="">福岡県</a></li>
-                <li><a href="">佐賀県</a></li>
-                <li><a href="">長崎県</a></li>
-                <li><a href="">熊本県</a></li>
-                <li><a href="">大分県</a></li>
-                <li><a href="">宮崎県</a></li>
-                <li><a href="">鹿児島県</a></li>
-                <li><a href="">沖縄県</a></li>
+                <li><a href="kannkouti/hukuoka.php">福岡県</a></li>
+                <li><a href="kannkuti/saga.php">佐賀県</a></li>
+                <li><a href="kannkouti/nagasaki.php">長崎県</a></li>
+                <li><a href="kannkoti/kumamoto.php">熊本県</a></li>
+                <li><a href="kannkouti/ooita.php">大分県</a></li>
+                <li><a href="kannkouti/miyazaki.php">宮崎県</a></li>
+                <li><a href="kannkouti/kagosima.php">鹿児島県</a></li>
+                <li><a href="kankouti/okinawa.php">沖縄県</a></li>
 
             </ul>
         </div>
