@@ -5,6 +5,7 @@
     <title>User-Login</title>
     <link rel="icon"  type="image/x-icon" sizes="144*144" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id"
           content="165332448198-6hl3alti9ihbgihoit1nqu4f6bmvphtg.apps.googleusercontent.com">
@@ -19,7 +20,7 @@
     </style>
 </head>
 <body>
-    <button  class="button" onclick=history.back()>戻る</button>
+<button type="button"  class="original" onclick=history.back()>←戻る</button>
     <div class="logo">
     <img src="img/logo1.png" title="九州旅行記" width="400" height="200" >
     </div>

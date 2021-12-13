@@ -5,12 +5,14 @@
     <title>Check</title>
     <link rel="icon"  type="image/x-icon" sizes="144*144" href="../card/favicon.ico">
     <link rel="stylesheet" href="css/checkstyle.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
 <body>
-<a href="" class="original-button">←　戻る</a>
+<button type="button"  class="original" onclick=history.back()>←戻る</button>
 <div class="N1">
 <p><strong><big>注文内容を確認する</big></strong></p>
 </div>
+<form action="../EC/over.php" method="post">
 <div class="info0 warp">
      <ul>
 
@@ -37,8 +39,8 @@
         配送料：１００円
         <br>
         <br>合計:￥599</p>
-    <button class="butt">購入に進む</button>
+    <button class="butt">注文を確定する</button>
 </div>
-
+</form>
 </body>
 </html>

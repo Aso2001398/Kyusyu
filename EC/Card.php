@@ -5,16 +5,14 @@
     <title>Card</title>
     <link rel="icon"  type="image/x-icon" sizes="144*144" href="img/favicon.ico">
     <link rel="stylesheet" href="css/Cardstyle.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
 <body>
 <div class="header">
-    <div class="back_button">
-        <a href="">戻る</a>
-    </div>
-    <!--<a href="" class="btn btn-border">戻る</a>-->
+    <button type="button"  class="original" onclick=history.back()>←戻る</button>
 
     <div class="img">
-        <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="100" >
+        <img src="../syop/img/logo1.png" alt="" title="九州旅行記" width="120" height="60" >
     </div>
     <div class="search">
         <form action="" method="post">
@@ -55,7 +53,7 @@
             <br>
             <br>:￥599</p>
 
-        <<button class="butt">購入に進む</button>
+        <button class="butt">購入に進む</button>
     </div>
 </form>
 </body>
