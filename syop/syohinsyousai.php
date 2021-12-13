@@ -5,13 +5,14 @@
     <title>商品詳細ページ</title>
     <link rel="stylesheet" href="css/ecSite.css">
     <link rel="stylesheet" href="css/syohin_syosai.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
 
 <body>
 <div class="header">
-    <div class="back_button">
-        <button type="button" onclick=history.back()>←戻る</button>
-    </div>
+
+        <button type="button"  class="original" onclick=history.back()>←戻る</button>
+
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
     <div class="img">

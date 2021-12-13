@@ -1,9 +1,9 @@
 .PG{
     text-align: center;
-    padding: 1px;+
+    padding: 1px;
 }
 .but{
     position:absolute;
-    bottom:410px;
-    right:680px;
+    top:600px;
+    left:680px;
 }

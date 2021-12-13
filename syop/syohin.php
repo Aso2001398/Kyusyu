@@ -5,12 +5,13 @@
   <title>ECサイト</title>
   <link rel="stylesheet" href="css/ecSite.css">
   <link rel="stylesheet" href="css/shohin.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
 
 <body>
 <div class="header">
   <div class="back_button">
-    <button type="button" onclick=history.back()>←戻る</button>
+    <button type="button"  class="original" onclick=history.back()>←戻る</button>
   </div>
   <!--<a href="" class="btn btn-border">戻る</a>-->
 

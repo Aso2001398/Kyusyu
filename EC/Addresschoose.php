@@ -5,11 +5,12 @@
     <title>Addresschoose</title>
     <link rel="icon"  type="image/x-icon" sizes="144*144" href="../card/favicon.ico">
     <link rel="stylesheet" href="css/Addstyle.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 
 </head>
 <body>
-<a href="" class="original-button">←　戻る</a>
+<button type="button"  class="original" onclick=history.back()>←戻る</button>
 <div class="N1">
     <p><strong><big>お届け先を選択</big></strong></p>
 </div>

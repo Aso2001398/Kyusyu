@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>管理者商品消去</title>
     <link rel="stylesheet" href="./css/item_delete.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 <body>
-<button type="button" onclick="location.href='kanri_top.php'">←戻る</button>
+<button type="button"class="original" onclick="location.href='kanri_top.php'">←戻る</button>
 <div class="parent">
     <span class="title_1">  <h1>商品消去</h1> </span>
 </div>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--<a href="" class="original">←　戻る</a>--><button type="button" onclick=history.back()>←戻る</button>
+<!--<a href="" class="original">←　戻る</a>--><button type="button" class="original" onclick=history.back()>←戻る</button>
 <div class="picture">
     <img src="img/rogo.png" width="150" height="50">
 </div>
