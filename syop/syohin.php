@@ -24,7 +24,7 @@
     </form>
   </div>
   <div class="img2">
-    <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+    <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
   </div>
   <div class="img3">
     <a href="" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
@@ -54,7 +54,7 @@
       <p>観光地↓</p>
       <ul>
         <!--<li><a class="active" href="#home">Home</a></li>-->
-        <li><a href="">福岡県</a></p>
+          <li><a href="">福岡県</a></li>
         <li><a href="">佐賀県</a></li>
         <li><a href="">長崎県</a></li>
         <li><a href="">熊本県</a></li>

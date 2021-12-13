@@ -10,7 +10,7 @@
 <body>
 <div class="header">
     <div class="back_button">
-        <a href="">戻る</a>
+        <button type="button" onclick=history.back()>←戻る</button>
     </div>
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
@@ -76,17 +76,19 @@
                 ]</p>
             <p class="item_date" >おいしいおいしいおいしい</p>
             <div class="select">
-                カートに入れる
-            <p><input type="number"  value="1" min="1" max="10" step="1"></p>
+                <a href="../EC/Card.php"> カートに入れる</a>
+                <br>
+
             </div>
         </div>
+        <br><br>
         <p class="box"> </p>
         <p class="kaan">関連商品</p>
         <div class="item">
             <div class="float_box">
                 <ul>
                     <li> <!-- [▼] アイテム -->
-                        <a href="#">
+                        <a href="../syop/syohinsyousai.php">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -94,7 +96,7 @@
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="#">
+                        <a href="../syop/syohinsyousai.php">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -102,7 +104,7 @@
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="#">
+                        <a href="../syop/syohinsyousai.php">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -118,7 +120,7 @@
                         </a>-->
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="#">
+                        <a href="../syop/syohinsyousai.php">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -126,7 +128,7 @@
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="#">
+                        <a href="../syop/syohinsyousai.php">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -134,7 +136,7 @@
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="#">
+                        <a href="../syop/syohinsyousai.php">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>

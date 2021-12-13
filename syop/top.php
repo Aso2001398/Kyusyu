@@ -23,6 +23,7 @@ if(isset($_SESSION['message'])){
     EOM;
     $_SESSION['message'] = null;
 }
+$pdo = DB_connect();
 ?>
 
 
@@ -51,7 +52,7 @@ if(isset($_SESSION['message'])){
     <div class="transition">
         <a href="../syop/top.php"><p class="top">トップページ</p></a>
         <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
-        <a href="../syop/syohin.html"><p class="miyage">お土産一覧</p></a>
+        <a href="syohin.php"><p class="miyage">お土産一覧</p></a>
     </div>
     <!--画像-->
     <div class="pics-slide">
@@ -196,7 +197,7 @@ if(isset($_SESSION['message'])){
         <div class="float_box">
             <ul>
                 <li> <!-- [▼] アイテム -->
-                    <a href="#">
+                    <a href="../syop/syohinsyousai.php">
                         <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                         <p class="name">TURUNOKO</p>
                         <p class="item_date" >おいしいおいしいおいしい</p>
@@ -204,7 +205,7 @@ if(isset($_SESSION['message'])){
                     </a>
                 </li> <!-- [▲] アイテム -->
                 <li> <!-- [▼] アイテム -->
-                    <a href="#">
+                    <a href="../syop/syohinsyousai.php">
                         <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                         <p class="name">TURUNOKO</p>
                         <p class="item_date" >おいしいおいしいおいしい</p>
@@ -212,7 +213,7 @@ if(isset($_SESSION['message'])){
                     </a>
                 </li> <!-- [▲] アイテム -->
                 <li> <!-- [▼] アイテム -->
-                    <a href="#">
+                    <a href="../syop/syohinsyousai.php">
                         <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                         <p class="name">TURUNOKO</p>
                         <p class="item_date" >おいしいおいしいおいしい</p>
@@ -228,7 +229,7 @@ if(isset($_SESSION['message'])){
                     </a>-->
                 </li> <!-- [▲] アイテム -->
                 <li> <!-- [▼] アイテム -->
-                    <a href="#">
+                    <a href="../syop/syohinsyousai.php">
                         <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                         <p class="name">TURUNOKO</p>
                         <p class="item_date" >おいしいおいしいおいしい</p>
@@ -236,7 +237,7 @@ if(isset($_SESSION['message'])){
                     </a>
                 </li> <!-- [▲] アイテム -->
                 <li> <!-- [▼] アイテム -->
-                    <a href="#">
+                    <a href="../syop/syohinsyousai.php">
                         <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                         <p class="name">TURUNOKO</p>
                         <p class="item_date" >おいしいおいしいおいしい</p>
@@ -244,7 +245,7 @@ if(isset($_SESSION['message'])){
                     </a>
                 </li> <!-- [▲] アイテム -->
                 <li> <!-- [▼] アイテム -->
-                    <a href="#">
+                    <a href="../syop/syohinsyousai.php">
                         <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                         <p class="name">TURUNOKO</p>
                         <p class="item_date" >おいしいおいしいおいしい</p>

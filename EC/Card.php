@@ -14,7 +14,7 @@
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
     <div class="img">
-        <img src="card/img/logo1.png" alt="" title="九州旅行記" width="150" height="50" >
+        <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="100" >
     </div>
     <div class="search">
         <form action="" method="post">
@@ -23,10 +23,10 @@
         </form>
     </div>
     <div class="img2">
-        <a href="" ><img src="card/img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+        <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
     <div class="img3">
-        <a href="" ><img src="card/img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
+        <a href="" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
 <div class="transition">
@@ -39,7 +39,7 @@
         <p><strong>ショッピングカード</strong></p>
         <hr>
         <ul>
-            <li class="info_2"> <img src="card/img/img1.jpg" width="80px"/> </li>
+            <li class="info_2"> <img src="img/img1.jpg" width="80px"/> </li>
             <li class="info_3"><a>商品名：ゴマサバ</a></li>
             <li class="info_4"><a>￥：599</a> </li>
             <li class="info_6">
