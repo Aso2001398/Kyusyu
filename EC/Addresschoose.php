@@ -13,7 +13,8 @@
 <div class="N1">
     <p><strong><big>お届け先を選択</big></strong></p>
 </div>
-<hr>
+
+<form action="Pay.php"
 <div class="A1">
     <ul>
         <li class="info0_2"><a>名前：麻生太郎</a></li>
@@ -25,7 +26,7 @@
     <button class="butt">この住所を選択</button>
 </div>
 <div class="A3">
-    <button class="butt1">支払方法を選択</button>
+    <a href=""> <button class="butt1">支払方法を選択</button></a>
 </div>
 <hr>
 <h1>住所を追加</h1>
@@ -50,6 +51,7 @@
     <input type="text" name="addr21" size="30">
     <br>
     </div>
+
 
 </body>
 </html>

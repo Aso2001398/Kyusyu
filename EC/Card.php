@@ -30,11 +30,11 @@
     </div>
 </div>
 <div class="transition">
-    <p class="top">トップページ</p>
-    <p class="spot">観光スポット</p>
-    <p class="miyage">お土産一覧</p>
+    <a href="../syop/top.php"><p class="top">トップページ</p></a>
+    <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
+    <a href="syohin.php"><p class="miyage">お土産一覧</p></a>
 </div>
-
+<form action="Addresschoose.php" method="post">
     <div class="info warp">
         <p><strong>ショッピングカード</strong></p>
         <hr>
@@ -55,8 +55,8 @@
             <br>
             <br>:￥599</p>
 
-        <button class="butt">購入に進む</button>
+        <<button class="butt">購入に進む</button>
     </div>
-
+</form>
 </body>
 </html>

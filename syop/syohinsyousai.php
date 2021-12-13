@@ -24,16 +24,16 @@
         </form>
     </div>
     <div class="img2">
-        <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+        <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
     <div class="img3">
         <a href="" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
 <div class="transition">
-    <p class="top">トップページ</p>
-    <p class="spot">観光スポット</p>
-    <p class="miyage">お土産一覧</p>
+    <a href="../syop/top.php"><p class="top">トップページ</p></a>
+    <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
+    <a href="syohin.php"><p class="miyage">お土産一覧</p></a>
 </div>
 <main>
     <div class="localNavigation">
@@ -54,14 +54,14 @@
             <p>観光地↓</p>
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="kannkouti/hukuoka.php">福岡県</a></li>
-                <li><a href="kannkouti/saga.php">佐賀県</a></li>
-                <li><a href="kankouti/nagasaki.php">長崎県</a></li>
-                <li><a href="">熊本県</a></li>
-                <li><a href="">大分県</a></li>
-                <li><a href="">宮崎県</a></li>
-                <li><a href="">鹿児島県</a></li>
-                <li><a href="">沖縄県</a></li>
+                <li><a href="../kannkouti/hukuoka.php">福岡県</a></li>
+                <li><a href="../kannkouti/saga.php">佐賀県</a></li>
+                <li><a href="../kannkouti/nagasaki.php">長崎県</a></li>
+                <li><a href="../kannkouti/kumamoto.php">熊本県</a></li>
+                <li><a href="../kannkouti/ooita.php">大分県</a></li>
+                <li><a href="../kannkouti/miyazaki.php">宮崎県</a></li>
+                <li><a href="../kannkouti/kagosima.php">鹿児島県</a></li>
+                <li><a href="../kannkouti/okinawa.php">沖縄県</a></li>
 
             </ul>
         </div>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/Paystyle.css">
 </head>
 <body>
+<form action=""
 <a href="" class="original-button">←　戻る</a>
 <table class="PG" cellspacing="1" bgcolor="#333333"  width="800" cellpadding="50">
     <tr>
