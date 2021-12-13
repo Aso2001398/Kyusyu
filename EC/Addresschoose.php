@@ -14,7 +14,7 @@
     <p><strong><big>お届け先を選択</big></strong></p>
 </div>
 
-<form action="Pay.php"
+<form action="Pay.php" method="post">
 <div class="A1">
     <ul>
         <li class="info0_2"><a>名前：麻生太郎</a></li>
@@ -36,21 +36,14 @@
         <input id="i_name" type="text" name="name" value="">
         <br>
         <label for="i_yubinbango">郵便番号</label><br>
-    <input type="text" name="zip21" size="4" maxlength="3"> － <input type="text" name="zip22" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip21','zip22','addr21','addr21');" >
+    <input type="text" name="zip22" size="9" maxlength="8" onKeyUp="AjaxZip3.zip2addr('zip21','zip22','addr21','addr21');" >
     <br>
-    <label for="i_todo">都道府県</label><br>
-    <input type="text" name="addr21" size="30">
-    <br>
-    <label for="i_shison">市区町村</label><br>
-    <input type="text" name="addr21" size="30">
-    <br>
-    <label for="i_banchi">番地</label><br>
-    <input type="text" name="addr21" size="30">
-    <br>
-    <label for="i_tatemono">建物名</label><br>
-    <input type="text" name="addr21" size="30">
-    <br>
+    <label for="i_todo">住所</label><br>
+    <input type="text" name="addr21" size="100">
+
+        <button name="newAddress">住所を追加</button>
     </div>
+
 
 
 </body>

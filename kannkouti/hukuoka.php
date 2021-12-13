@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a href="" class="original">←　戻る</a>
+<!--<a href="" class="original">←　戻る</a>--><button type="button" onclick=history.back()>←戻る</button>
 <div class="picture">
-    <img src="img/rogo.png">
+    <img src="img/rogo.png" width="150" height="50">
 </div>
+<br><br><br>
 <script language="JavaScript">
 function setBG(n)
 {
@@ -45,13 +46,13 @@ function setDG(n)
     <li>
         <div class="change1">
         </div>
-        <img src="../../syop/img/fukuoka/mozikouretoro.jpg" name="gazou" class="change" onclick="setBG()" width="150" height="217" alt="">
-        <img src="../../syop/img/fukuoka/shiraitonotaki.jpg" name="gazou" class="change2" onclick="setCG(2)" width="150" height="217" alt="">
-        <img src="../../syop/img/fukuoka/syounyuudou2%20(1).jpg" name="gazou" class="change3" onclick="setDG(3)" width="150" height="217" alt="">
+        <img src="../syop/img/fukuoka/mozikouretoro.jpg" name="gazou" class="change" onclick="setBG()" width="150" height="217" alt="">
+        <img src="../syop/img/fukuoka/shiraitonotaki.jpg" name="gazou" class="change2" onclick="setCG(2)" width="150" height="217" alt="">
+        <img src="../syop/img/fukuoka/syounyuudou2%20(1).jpg" name="gazou" class="change3" onclick="setDG(3)" width="150" height="217" alt="">
     </li>
 </ul>
 <div class="picture1">
-    <img id="image_change" src="../../syop/img/fukuoka/mozikouretoro.jpg"  width="1700" height="900">
+    <img src="../syop/img/fukuoka/mozikouretoro.jpg" id="image_change" width="1200" height="900">
 </div>
 <script type="text/javascript">
     img = new Array("img/fukuoka/mozikouretoro.jpg","img/fukuoka/shiraitonotaki.jpg","img/fukuoka/syounyuudou2%20(1).jpg"); //*(1)
