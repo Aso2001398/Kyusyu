@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION["login_account"])) {
+if (isset($_SESSION["mail"])) {
     header("Location: ../syop/mypage.php");
     exit();
 }
@@ -70,8 +70,7 @@ if(isset($_SESSION['message'])){
                         xhr.open('POST', 'http://aso2001398.mods.jp/php2/Kyusyu/login/google_login.php');
                         xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
                         xhr.send('name=' + profile.getName() + '&mail=' + profile.getEmail());
-                        sessionStorage.setItem('re', 'true')
-                        window.location.href = 'google_login.php';
+                        window.location.href = '../syop/top.php'
                     }
 
                 </script>

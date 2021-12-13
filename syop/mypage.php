@@ -1,3 +1,4 @@
+<?php session_start();print_r($_SESSION)?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +14,8 @@
 
 <div class="account">
     <p id="account_1">アカウント情報</p>
-    <p>名前</p>
-    <p>メールアドレス</p>
+    <p>名前 : <?php echo $_SESSION['name']?></p>
+    <p>メールアドレス : <?php echo $_SESSION['mail']?></p>
     <a href="../login/logout.php">ログアウト</a>
     <a href="../login/taikai.php">退会</a>
 </div>

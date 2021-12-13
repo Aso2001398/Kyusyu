@@ -44,7 +44,7 @@ else {
                             if($ail['mail'] == $_POST['mail']){
                                 session_regenerate_id(TRUE); //セッションidを再発行
                                 $_SESSION["user_id"] = $ail['user_id'];
-                                $_SESSION["login_account"] = $ail['mail']; //セッションにログイン情報を登録
+                                $_SESSION["mail"] = $ail['mail']; //セッションにログイン情報を登録
                                 $_SESSION["name"] = $ail['user_name'];
                                 $_SESSION["address"] = $ail['address'];
                                 $_SESSION['login'] = true;

@@ -11,8 +11,7 @@ if(isset($_SESSION["login_account"])){
 }else {
     //postされて来なかったとき
     if (count($_POST) === 0) {
-        header("Location: google_login.php");
-        exit();
+
     }
 //postされて来た場合
     else {
@@ -28,7 +27,7 @@ if(isset($_SESSION["login_account"])){
                 if ($ail['google_check']) {
                     session_regenerate_id(TRUE); //セッションidを再発行
                     $_SESSION["user_id"] = $ail['user_id'];
-                    $_SESSION["login_account"] = $ail['mail']; //セッションにログイン情報を登録
+                    $_SESSION["mail"] = $ail['mail']; //セッションにログイン情報を登録
                     $_SESSION["name"] = $ail['user_name'];
                     $_SESSION["address"] = $ail['address'];
                     $_SESSION['login'] = true;
@@ -38,7 +37,7 @@ if(isset($_SESSION["login_account"])){
 
                 }
             }else{
-                $rnd= substr(bin2hex(random_bytes()), 0, $length);;
+                $rnd= substr(bin2hex(random_bytes(8)), 8, );;
                 $ins=$pdo->prepare('INSERT INTO member(mail, user_name, password, join_date, google_check) 
                           VALUES(?,?,?,?,?)');
                 $ins->bindValue(1,$_POST['mail'], PDO::PARAM_STR);
