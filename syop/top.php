@@ -1,15 +1,14 @@
 <?php
 //セッション宣言
-//セッションの中身確認（削除）
 session_start();
-print_r($_SESSION);
+//セッションの中身確認（削除）
+//print_r($_SESSION);
 if(isset($_SESSION['re'])){
     echo <<<EOM
         <script type="text/javascript">
         location.reload();
         </script>
     EOM;
-    $_SESSION['re'] = null;
 }
 //ローカルライブラリに接続
 require_once '../method.php';
@@ -24,6 +23,22 @@ if(isset($_SESSION['message'])){
     $_SESSION['message'] = null;
 }
 $pdo = DB_connect();
+
+echo '<br>';
+
+/*//DBから画像を引っ張ってくる方法　もし鶴乃子を引っ張ってくる時
+//itemテーブルの情報を全て引っ張ってくる
+$name=$pdo -> prepare('SELECT * FROM item');
+$name -> execute();
+//それぞれの配列から名前を取得可能にする
+foreach ($name as $row){
+    //自分がほしいnameを持つ商品を探索する
+    if($row['item_name'] == '鶴乃子'){
+        $size = 'height="100vh"';
+        //商品はadmin_kariの中にあるため、そこまではhtmlで記入し、本体の名前だけをDBで取得する
+        echo "<img src='../admin_kari/img/item/{$row['image_name']}' {$size}><br>";
+    }
+}*/
 ?>
 
 
@@ -196,65 +211,24 @@ $pdo = DB_connect();
     <div class="item">
         <div class="float_box">
             <ul>
-                <li> <!-- [▼] アイテム -->
-                    <a href="../syop/syohinsyousai.php">
-                        <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                        <p class="name">TURUNOKO</p>
-                        <p class="item_date" >おいしいおいしいおいしい</p>
-                        <p class="price">&yen;1,980</p>
-                    </a>
-                </li> <!-- [▲] アイテム -->
-                <li> <!-- [▼] アイテム -->
-                    <a href="../syop/syohinsyousai.php">
-                        <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                        <p class="name">TURUNOKO</p>
-                        <p class="item_date" >おいしいおいしいおいしい</p>
-                        <p class="price">&yen;1,980</p>
-                    </a>
-                </li> <!-- [▲] アイテム -->
-                <li> <!-- [▼] アイテム -->
-                    <a href="../syop/syohinsyousai.php">
-                        <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                        <p class="name">TURUNOKO</p>
-                        <p class="item_date" >おいしいおいしいおいしい</p>
-                        <p class="price">&yen;1,980</p>
-                    </a>
-                </li> <!-- [▲] アイテム -->
-                <li> <!-- [▼] アイテム -->
-                    <!--<a href="#">
-                      <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                      <p class="name">TURUNOKO</p>
-                      <p class="item_date" >おいしいおいしいおいしい</p>
-                      <p class="price">&yen;1,980</p>
-                    </a>-->
-                </li> <!-- [▲] アイテム -->
-                <li> <!-- [▼] アイテム -->
-                    <a href="../syop/syohinsyousai.php">
-                        <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                        <p class="name">TURUNOKO</p>
-                        <p class="item_date" >おいしいおいしいおいしい</p>
-                        <p class="price">&yen;1,980</p>
-                    </a>
-                </li> <!-- [▲] アイテム -->
-                <li> <!-- [▼] アイテム -->
-                    <a href="../syop/syohinsyousai.php">
-                        <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                        <p class="name">TURUNOKO</p>
-                        <p class="item_date" >おいしいおいしいおいしい</p>
-                        <p class="price">&yen;1,980</p>
-                    </a>
-                </li> <!-- [▲] アイテム -->
-                <li> <!-- [▼] アイテム -->
-                    <a href="../syop/syohinsyousai.php">
-                        <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                        <p class="name">TURUNOKO</p>
-                        <p class="item_date" >おいしいおいしいおいしい</p>
-                        <p class="price">&yen;1,980</p>
-                    </a>
-                </li> <!-- [▲] アイテム -->
+                <?php
+                for($i=0;$i<6;$i++){
+                    if($i == 3){
+                        echo '<li></li>';
+                    }
+                    echo <<<EOM
+                        <li> <!-- [▼] アイテム -->
+                            <a href="../syop/syohinsyousai.php">
+                                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
+                                <p class="name">TURUNOKO</p>
+                                <p class="item_date" >おいしいおいしいおいしい</p>
+                                <p class="price">&yen;1,980</p>
+                            </a>
+                         </li> <!-- [▲] アイテム -->
+                    EOM;
+                }
+                ?>
             </ul>
-
-
         </div>
     </div>
     </div>

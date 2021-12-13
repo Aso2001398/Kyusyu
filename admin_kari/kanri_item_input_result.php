@@ -25,7 +25,6 @@ $ame -> execute();
 foreach ($ame as $ae){
     if($ae['item_name'] == $_POST['item_name']){
         //指定した商品が削除されていた場合、新しいidで登録させる
-        echo $ae['delete_check'];
         if(!$ae['delete_check']){
             $up=true;
             //更新の際、複数の同名商品が存在する場合があるため、nameではなくidを取得する
@@ -69,7 +68,7 @@ if($up){
     move_uploaded_file($_FILES['image_name']['tmp_name'], $upload);
 
     if($sql->rowCount()==1){
-        echo '追加に成功しました。<br>下のボタンを押してください。';
+        echo '追加に成功しました。<br>ボタンを押してください。';
     }else{
         echo '追加に失敗しました';
     }

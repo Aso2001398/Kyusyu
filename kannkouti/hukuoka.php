@@ -84,7 +84,7 @@ function setDG(n)
                     福岡県
                 </h1>
                 <hr width="100%" color="black" size="0">
-                <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
+                <img src="../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
             </div>
         </a>
         <a href="saga.php" class="kannkouti">
