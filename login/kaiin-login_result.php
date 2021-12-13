@@ -49,7 +49,7 @@ else {
                                 $_SESSION["address"] = $ail['address'];
                                 $_SESSION['login'] = true;
                                 $_SESSION['message'] = "ようこそ、{$ail['user_name']}さん";
-                                header("Location: top.php");
+                                header("Location: ../syop/top.php");
                                 exit();
                             }
                         }
