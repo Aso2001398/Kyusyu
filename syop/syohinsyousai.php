@@ -1,3 +1,14 @@
+<?php
+//セッション宣言
+session_start();
+//セッションの中身確認（削除）
+//print_r($_SESSION);
+
+//ローカルライブラリに接続
+require_once '../method.php';
+$pdo = DB_Connect();
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -68,19 +79,8 @@
         </div>
     </div>
     <div class="shohin_shousai">
-        <img src="item_img/Fukuoka_Tsurunoko.img" class="item_img"alt="" title="" width="700" height="400" >
-        <div class="item_date_box">
-            <p class="item_name">鶴乃子</p>
-            <p class="price">&yen;1,980</p>
-            <p class="zai">在庫[
-                10
-                ]</p>
-            <p class="item_date" >おいしいおいしいおいしい<?php print_r($_POST) ?></p>
-            <div class="select">
-                <a href="../EC/Card.php"> カートに入れる</a>
-                <br>
 
-            </div>
+
         </div>
         <br><br>
         <p class="box"> </p>
