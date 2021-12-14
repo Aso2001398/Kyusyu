@@ -18,7 +18,7 @@
     <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="50" >
   </div>
   <div class="search">
-    <form action="" method="post">
+    <form action="../syop/search.php" method="post">
       <input type="search" style="width:300px;height: 50px;" id="search_1" placeholder="キーワードを入力">
       <input type="submit" name="submit" id="search_2" value="検索">
     </form>
@@ -41,14 +41,14 @@
     <div class="kategori">
       <ul>
         <!--<li><a class="active" href="#home">Home</a></li>-->
-        <li><a href="">福岡県</a></li>
-        <li><a href="">佐賀県</a></li>
-        <li><a href="">長崎県</a></li>
-        <li><a href="">熊本県</a></li>
-        <li><a href="">大分県</a></li>
-        <li><a href="">宮崎県</a></li>
-        <li><a href="">鹿児島県</a></li>
-        <li><a href="">沖縄県</a></li>
+          <li><a href="../kannkouti/syouhinn.php">福岡県</a></li>
+          <li><a href="../kannkouti/syouhinn2.php">佐賀県</a></li>
+          <li><a href="../kannkouti/syouhinn3.php">長崎県</a></li>
+          <li><a href="../kannkouti/syouhinn4.php">熊本県</a></li>
+          <li><a href="../kannkouti/syouhinn5.php">大分県</a></li>
+          <li><a href="../kannkouti/syouhinn6.php">宮崎県</a></li>
+          <li><a href="../kannkouti/syouhinn7.php">鹿児島県</a></li>
+          <li><a href="../kannkouti/syouhinn8.php">沖縄県</a></li>
 
       </ul>
       <p>観光地↓</p>

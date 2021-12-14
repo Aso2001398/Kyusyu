@@ -5,35 +5,34 @@
     <title>ECサイト</title>
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
 <body>
 <div class="header">
-    <div class="back_button">
-        <a href="">戻る</a>
-    </div>
+    <button type="button"  class="original" onclick=history.back()>←戻る</button>
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
     <div class="img">
         <img src="img/rogo.png" alt="" title="九州旅行記" width="150" height="50" >
     </div>
     <div class="search">
-        <form action="" method="post">
+        <form action="../syop/search.php" method="post">
             <input type="search" style="width:300px;height: 50px;" id="search_1" placeholder="キーワードを入力">
             <input type="submit" name="submit" id="search_2" value="検索">
         </form>
     </div>
 
     <div class="img2">
-        <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+        <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
     <div class="img3">
-        <a href="" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
+        <a href="../EC/Card.php" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
 <div class="transition">
-    <p class="top">トップページ</p>
-    <p class="spot">観光スポット</p>
-    <p class="miyage">お土産一覧</p>
+    <a href="../syop/top.php"><p class="top">トップページ</p></a>
+    <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
+    <a href="../syop/syohin.php"><p class="miyage">お土産一覧</p></a>
 </div>
 <main>
     <div class="localNavigation">
