@@ -42,8 +42,8 @@ if(isset($_SESSION["mail"])){
         $ins->bindValue(4, date("Y-m-d"), PDO::PARAM_STR);
         $ins->bindValue(5, true, PDO::PARAM_STR);
         $ins->execute();
-        $se=$pdo->prepare('select * from member where user_name = :name');
-        $se->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
+        $se=$pdo->prepare('select * from member where mail = :mail');
+        $se->bindValue(':mail', $_SESSION['mail'], PDO::PARAM_STR);
         $se->execute();
         $result=$se->fetch(PDO::FETCH_ASSOC);
         session_regenerate_id(TRUE); //セッションidを再発行

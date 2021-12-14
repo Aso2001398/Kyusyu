@@ -1,3 +1,11 @@
+<?php
+session_start();
+//ローカルライブラリに接続
+require_once '../method.php';
+
+//DB接続
+$pdo = DB_connect();
+?>
 <!doctype html>
 <html>
 <head>
@@ -67,7 +75,62 @@
     </div>
   </div>
   <div class="goods_box">
+      <?php
+      $i=0;
+      $size = 'height="100vh"';
+      $items=$pdo -> query('SELECT * FROM item order by item_id desc');
+      foreach ($items as $item){
+          $data=$item['item_data'];
+          if($item['delete_check']){
+              continue;
+          }
+          if($i==0){
+              echo <<<EOM
+                    <div class="new_goods">
+                            
+                            <p class="sinchaku">新着商品</p>　
+                            <form action="../syop/syohinsyousai.php" class="form2" method="post">   
+                                <a href="javascript:form1[{$i}].submit()">
+                                    <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="NewGoods_img" width="400" height="150" >
+                                    <p class="name">商品名：{$item['item_name']}</p>
+                                    <p class="item_date" >{$data}</p>
+                                    <p class="price">価格：&yen;{$item['price']}</p>
+                                    
+                                </a>  
+                                <input type="hidden" name="item_name" value="{$item['item_name']}">
+                            </form>
+                            <a href="" >
+                            <img src="item_img/Fukuoka_Tsurunoko.img" alt="" title="福岡鶴乃子" class="NewGoods_img" width="400" height="150" ></a>
+                            <div class="NewGoodsDate"><p>
+                                <p class="name">商品名：</p><a href=""></a>
+                                <p>  <!--商品説明--></p>
+                                <p class="price">価格：</p>
+                                </p>
+                            </div>
+                    </div>
+               EOM;
+          }else if($i==3){
+              echo '<li></li>';
+          }
+          echo <<<EOM
+                        <li> <!-- [▼] アイテム -->
+                            <form action="../syop/syohinsyousai.php" name="form1" method="post">   
+                                <a href="javascript:form1[{$i}].submit()">
+                                    <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="image">
+                                    <p class="name">{$item['item_name']}</p>
+                                    <p class="item_date" >{$data}</p>
+                                    <p class="price">&yen;{$item['price']}</p>
+                                    
+                                </a>  
+                                <input type="hidden" name="item_name" value="{$item['item_name']}">
+                            </form>
+                         </li> <!-- [▲] アイテム -->
+                    EOM;
+          $i++;
+      }
+      ?>
     <div class="new_goods">
+
         <p class="sinchaku">新着商品</p>　
         <a href="" ><img src="item_img/Fukuoka_Tsurunoko.img" alt="" title="福岡鶴乃子" class="NewGoods_img" width="400" height="150" ></a>
             <div class="NewGoodsDate"><p>

@@ -1,11 +1,17 @@
 <?php
 //セッション宣言
 session_start();
-//セッションの中身確認（削除）
-print_r($_SESSION);
+
 
 //ローカルライブラリに接続
 require_once '../method.php';
+/*if(isset($_SESSION['cart'])){
+    $_SESSION['message'] = null;
+    header("Location: ../syop/cart_tuika.php");
+    exit();
+}*/
+//セッションの中身確認（削除）
+print_r($_SESSION);
 if(isset($_SESSION['message'])){
     echo <<<EOM
         <script type="text/javascript">
