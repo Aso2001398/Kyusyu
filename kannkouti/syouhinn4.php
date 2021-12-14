@@ -16,7 +16,7 @@
         <img src="img/rogo.png" alt="" title="九州旅行記" width="150" height="50" >
     </div>
     <div class="search">
-        <form action="" method="post">
+        <form action="../syop/search.php" method="post">
             <input type="search" style="width:300px;height: 50px;" id="search_1" placeholder="キーワードを入力">
             <input type="submit" name="submit" id="search_2" value="検索">
         </form>

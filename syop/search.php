@@ -1,49 +1,38 @@
-<?php
-//ローカルライブラリに接続
-require_once '../method.php';
-
-//DB接続
-$pdo = DB_connect();
-
-?>
-
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>商品詳細ページ</title>
-    <link rel="stylesheet" href="css/ecSite.css">
-    <link rel="stylesheet" href="css/syohin_syosai.css">
+    <title>ECサイト</title>
+    <link rel="stylesheet" href="../kannkouti/css/style3.css">
+    <link rel="stylesheet" href="../kannkouti/css/style4.css">
     <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
-
 <body>
 <div class="header">
-
-        <button type="button"  class="original" onclick=history.back()>←戻る</button>
-
+    <button type="button"  class="original" onclick=history.back()>←戻る</button>
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
     <div class="img">
-        <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="50" >
+        <img src="../kannkouti/img/rogo.png" alt="" title="九州旅行記" width="150" height="50" >
     </div>
     <div class="search">
-        <form action="../syop/search.php" method="post">
+        <form action="" method="post">
             <input type="search" style="width:300px;height: 50px;" id="search_1" placeholder="キーワードを入力">
             <input type="submit" name="submit" id="search_2" value="検索">
         </form>
     </div>
+
     <div class="img2">
         <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
-    <div class="img3">.
+    <div class="img3">
         <a href="../EC/Card.php" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
 <div class="transition">
     <a href="../syop/top.php"><p class="top">トップページ</p></a>
     <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
-    <a href="syohin.php"><p class="miyage">お土産一覧</p></a>
+    <a href="../syop/syohin.php"><p class="miyage">お土産一覧</p></a>
 </div>
 <main>
     <div class="localNavigation">
@@ -76,37 +65,16 @@ $pdo = DB_connect();
             </ul>
         </div>
     </div>
-    <div class="shohin_shousai">
-        <?php
-        $item=$pdo->prepare('select * from item where item_name = ?');
-        $item->bindValue(1,$_POST['item_name'],PDO::PARAM_STR);
-        $item->execute();
-        $result=$item->fetch(PDO::FETCH_ASSOC);
-        echo <<<EOM
-        <img src="../admin_kari/img/item/{$result['image_name']}" class="item_img"alt="" title="" width="700" height="400" >
-        <div class="item_date_box">
-            <p class="item_name">{$result['item_name']}</p>
-            <p class="price">&yen;{$result['price']}</p>
-            <p class="zai">在庫[
-                {$result['stock']}
-                ]</p>
-            <p class="item_date" >{$result['item_data']}</p>
-            
-               <button type="button" class="select">カートに入れる</button>
-
-           
+    <div class="goods_box">
+        <div class="new_goods">
+            <p class="omiyage">検索結果</p>
         </div>
-    EOM;
-        ?>
 
-        <br><br>
-        <p class="box"> </p>
-        <p class="kaan">関連商品</p>
         <div class="item">
             <div class="float_box">
                 <ul>
                     <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
+                        <a href="#">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -114,7 +82,7 @@ $pdo = DB_connect();
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
+                        <a href="#">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -122,7 +90,7 @@ $pdo = DB_connect();
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
+                        <a href="#">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -138,7 +106,7 @@ $pdo = DB_connect();
                         </a>-->
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
+                        <a href="#">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -146,7 +114,7 @@ $pdo = DB_connect();
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
+                        <a href="#">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -154,7 +122,7 @@ $pdo = DB_connect();
                         </a>
                     </li> <!-- [▲] アイテム -->
                     <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
+                        <a href="#">
                             <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
                             <p class="name">TURUNOKO</p>
                             <p class="item_date" >おいしいおいしいおいしい</p>
@@ -166,13 +134,6 @@ $pdo = DB_connect();
 
             </div>
         </div>
-
-
-
-
-
-
-
-    <script src="script/script2.js"></script>
+    </div>
 </body>
 </html>
