@@ -9,7 +9,7 @@
 <body>
 <!--<a href="" class="original">←　戻る</a>--><button type="button" class="original" onclick=history.back()>←戻る</button>
 <div class="picture">
-    <img src="img/rogo.png" width="150" height="50">
+    <a href="../syop/top.php"><img src="img/rogo.png" width="150" height="50"></a>
 </div>
 <br><br><br>
 <script language="JavaScript">
