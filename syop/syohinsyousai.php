@@ -36,7 +36,7 @@ $pdo = DB_connect();
     <div class="img2">
         <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
-    <div class="img3">
+    <div class="img3">.
         <a href="../EC/Card.php" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
@@ -91,11 +91,10 @@ $pdo = DB_connect();
                 {$result['stock']}
                 ]</p>
             <p class="item_date" >{$result['item_data']}</p>
-            <div class="select">
-                <a href="../EC/Card.php"> カートに入れる</a>
-                <br>
+            
+               <button type="button" class="select">カートに入れる</button>
 
-            </div>
+           
         </div>
     EOM;
         ?>
