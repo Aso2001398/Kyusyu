@@ -51,14 +51,14 @@ $pdo = DB_connect();
         <div class="kategori">
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="">福岡県</a></li>
-                <li><a href="">佐賀県</a></li>
-                <li><a href="">長崎県</a></li>
-                <li><a href="">熊本県</a></li>
-                <li><a href="">大分県</a></li>
-                <li><a href="">宮崎県</a></li>
-                <li><a href="">鹿児島県</a></li>
-                <li><a href="">沖縄県</a></li>
+                <li><a href="../kannkouti/syouhinn.php">福岡県</a></li>
+                <li><a href="../kannkouti/syouhinn2.php">佐賀県</a></li>
+                <li><a href="../kannkouti/syouhinn3.php">長崎県</a></li>
+                <li><a href="../kannkouti/syouhinn4.php">熊本県</a></li>
+                <li><a href="../kannkouti/syouhinn5.php">大分県</a></li>
+                <li><a href="../kannkouti/syouhinn6.php">宮崎県</a></li>
+                <li><a href="../kannkouti/syouhinn7.php">鹿児島県</a></li>
+                <li><a href="../kannkouti/syouhinn8.php">沖縄県</a></li>
 
             </ul>
             <p>観光地↓</p>

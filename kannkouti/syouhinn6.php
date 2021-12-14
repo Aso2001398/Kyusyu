@@ -5,12 +5,11 @@
     <title>ECサイト</title>
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 </head>
 <body>
 <div class="header">
-    <div class="back_button">
-        <a href="">戻る</a>
-    </div>
+    <button type="button"  class="original" onclick=history.back()>←戻る</button>
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
     <div class="img">
@@ -24,16 +23,16 @@
     </div>
 
     <div class="img2">
-        <a href="" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
+        <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
     <div class="img3">
-        <a href="" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
+        <a href="../EC/Card.php" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>
 <div class="transition">
-    <p class="top">トップページ</p>
-    <p class="spot">観光スポット</p>
-    <p class="miyage">お土産一覧</p>
+    <a href="../syop/top.php"><p class="top">トップページ</p></a>
+    <a href="../kannkouti/hukuoka.php"><p class="spot">観光スポット</p></a>
+    <a href="../syop/syohin.php"><p class="miyage">お土産一覧</p></a>
 </div>
 <main>
     <div class="localNavigation">
