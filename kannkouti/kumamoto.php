@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <meta charset="UTF-8">
-    <title>熊本県</title>
+    <title>熊本県 </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>

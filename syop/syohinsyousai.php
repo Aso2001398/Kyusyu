@@ -1,3 +1,12 @@
+<?php
+//ローカルライブラリに接続
+require_once '../method.php';
+
+//DB接続
+$pdo = DB_connect();
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -68,20 +77,29 @@
         </div>
     </div>
     <div class="shohin_shousai">
-        <img src="item_img/Fukuoka_Tsurunoko.img" class="item_img"alt="" title="" width="700" height="400" >
+        <?php
+        $item=$pdo->prepare('select * from item where item_name = ?');
+        $item->bindValue(1,$_POST['item_name'],PDO::PARAM_STR);
+        $item->execute();
+        $result=$item->fetch(PDO::FETCH_ASSOC);
+        echo <<<EOM
+        <img src="../admin_kari/img/item/{$result['image_name']}" class="item_img"alt="" title="" width="700" height="400" >
         <div class="item_date_box">
-            <p class="item_name">鶴乃子</p>
-            <p class="price">&yen;1,980</p>
+            <p class="item_name">{$result['item_name']}</p>
+            <p class="price">&yen;{$result['price']}</p>
             <p class="zai">在庫[
-                10
+                {$result['stock']}
                 ]</p>
-            <p class="item_date" >おいしいおいしいおいしい<?php print_r($_POST) ?></p>
+            <p class="item_date" >{$result['item_data']}</p>
             <div class="select">
                 <a href="../EC/Card.php"> カートに入れる</a>
                 <br>
 
             </div>
         </div>
+    EOM;
+        ?>
+
         <br><br>
         <p class="box"> </p>
         <p class="kaan">関連商品</p>

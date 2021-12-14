@@ -3,13 +3,7 @@
 session_start();
 //セッションの中身確認（削除）
 //print_r($_SESSION);
-if(isset($_SESSION['re'])){
-    echo <<<EOM
-        <script type="text/javascript">
-        location.reload();
-        </script>
-    EOM;
-}
+
 //ローカルライブラリに接続
 require_once '../method.php';
 if(isset($_SESSION['message'])){
