@@ -5,6 +5,11 @@ require_once '../method.php';
 //DB接続
 $pdo = DB_connect();
 
+if(!isset($_POST['item_name'])) {
+    $_SESSION['message'] = '商品リンクから遷移してください';
+    header("Location: ../syop/top.php");
+    exit();
+}
 ?>
 
 <!doctype html>
@@ -77,27 +82,31 @@ $pdo = DB_connect();
         </div>
     </div>
     <div class="shohin_shousai">
-        <?php
-        $item=$pdo->prepare('select * from item where item_name = ?');
-        $item->bindValue(1,$_POST['item_name'],PDO::PARAM_STR);
-        $item->execute();
-        $result=$item->fetch(PDO::FETCH_ASSOC);
-        echo <<<EOM
-        <img src="../admin_kari/img/item/{$result['image_name']}" class="item_img"alt="" title="" width="700" height="400" >
-        <div class="item_date_box">
+        <form action="cart_tuika.php" method="post">
+            <?php
+            $item=$pdo->prepare('select * from item where item_name = ?');
+            $item->bindValue(1,$_POST['item_name'],PDO::PARAM_STR);
+            $item->execute();
+            $result=$item->fetch(PDO::FETCH_ASSOC);
+            echo <<<EOM
+            <img src="../admin_kari/img/item/{$result['image_name']}" class="item_img"alt="" title="" width="700" height="400" >
+            <div class="item_date_box">
             <p class="item_name">{$result['item_name']}</p>
             <p class="price">&yen;{$result['price']}</p>
             <p class="zai">在庫[
                 {$result['stock']}
                 ]</p>
-            <p class="item_date" >{$result['item_data']}</p>
+            <p class="item_date" >{$result['item_data']}</p><br>
             
-               <button type="button" class="select">カートに入れる</button>
+            <input type="hidden" name="item_name" value="{$result['item_name']}">
+            <button type="submit" name="button" class="select">カートに入れる</button>
+            EOM;
+            ?>
+        </form>
+    </div>
 
-           
-        </div>
-    EOM;
-        ?>
+
+
 
         <br><br>
         <p class="box"> </p>

@@ -2,7 +2,7 @@
 //セッション宣言
 session_start();
 //セッションの中身確認（削除）
-//print_r($_SESSION);
+print_r($_SESSION);
 
 //ローカルライブラリに接続
 require_once '../method.php';
