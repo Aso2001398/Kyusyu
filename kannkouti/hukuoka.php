@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <meta charset="UTF-8">
-    <title>福岡県</title>
+    <title>福岡県 </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,10 +52,10 @@ function setDG(n)
     </li>
 </ul>
 <div class="picture1">
-    <img src="../syop/img/fukuoka/mozikouretoro.jpg" id="image_change" width="1500" height="1200">
+    <img id="image_change" src="../syop/img/fukuoka/mozikouretoro.jpg"  width="1500" height="1200">
 </div>
 <script type="text/javascript">
-    img = new Array("../syop/img/fukuoka/mozikouretoro.jpg","..syop/img/fukuoka/shiraitonotaki.jpg","..syop/img/fukuoka/syounyuudou2%20(1).jpg"); //*(1)
+    img = new Array("../syop/img/fukuoka/mozikouretoro.jpg","../syop/img/fukuoka/shiraitonotaki.jpg","../syop/img/fukuoka/syounyuudou2%20(1).jpg"); //*(1)
     count = -1; //*(2)
     imgTimer();
 
@@ -76,83 +76,6 @@ function setDG(n)
 </div>
 <p id="explanation" class="tired">（もじこうレトロ）は、福岡県北九州市門司区にある観光スポット。JR門司港駅周辺地域に残る外国貿易で栄えた時代の建造物を中心に、ホテル・商業施設などを大正レトロ調に整備した観光スポットであり、国土交通省の都市景観100選、
     土木学会デザイン賞2001最優秀賞を受賞している。対岸に位置する山口県下関市の唐戸・巌流島などとの周遊ルートとして多くの観光客で賑わう。</p>
-<!--<ul class="spot-list" >
-    <li>
-        <a href="hukuoka.php" class="kannkouti">
-            <div class="spot-text">
-                <h1 class="button">
-                    福岡県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
-            </div>
-        </a>
-        <a href="saga.php" class="kannkouti">
-            <div class="spot-text">
-                <h1 class="button">
-                    佐賀県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
-            </div>
-        </a>
-        <a href="nagasaki.php" class="kannkouti">
-            <div class="spot-text">
-                <h1 class="button">
-                    長崎県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
-            </div>
-        </a>
-        <a href="kumamoto.php" class="kannkouti">
-            <div class="spot-text">
-                <h1 class="button">
-                    熊本県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
-            </div>
-        </a>
-        <a href="ooita.php" class="kannkouti">
-            <div class="spot-text">
-                <h1 class="button">
-                    大分県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
-            </div>
-        </a>
-        <a href="miyazaki.php" class="kannkouti1">
-            <div class="spot-text">
-                <h1 class="button">
-                    宮崎県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
-            </div>
-        </a>
-        <a href="kagosima.php" class="kannkouti1">
-            <div class="spot-text">
-                <h1 class="button">
-                    鹿児島県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
-            </div>
-        </a>
-        <a href="okinawa.php" class="kannkouti1">
-            <div class="spot-text">
-                <h1 class="button">
-                    沖縄県
-                </h1>
-                <hr width="100%" color="black" size="0">
-                <img src="../syop/img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
-            </div>
-        </a>
-    </li>
-</ul>-->
-
 <ul class="spot-list" >
     <li>
         <a href="../kannkouti/hukuoka.php" class="kannkouti">
@@ -229,9 +152,8 @@ function setDG(n)
     </li>
 </ul>
 
-
 <h1>
-    <a href="" class="omiyage">＞お土産</a>
+    <a href="syouhinn.php" class="omiyage">＞お土産</a>
 </h1>
 </body>
 </html>

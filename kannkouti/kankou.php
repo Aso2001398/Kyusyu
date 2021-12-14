@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Title </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 <li>
     <div class="change1">
     </div>
-    <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="change" onclick="slideshow()" width="150" height="217" alt="">
+    <img src="img/fukuoka/mozikouretoro.jpg" class="change" onclick="slideshow()" width="150" height="217" alt="">
     <img src="img/yosinokouenn.jpeg" class="change2" onclick="slideshow()" width="150" height="217" alt="">
     <img src="img/ueguu.jpg" class="change3" onclick="slideshow()" width="150" height="217" alt="">
     <script>
@@ -44,7 +44,7 @@
             福岡県
         </h1>
         <hr width="100%" color="black" size="0">
-        <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
+        <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
     </div>
 </a>
     <a href="saga.php" class="kannkouti">
@@ -53,7 +53,7 @@
                 佐賀県
             </h1>
             <hr width="99%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="佐賀県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="佐賀県">
         </div>
     </a>
     <a href="nagasaki.php" class="kannkouti">
@@ -62,7 +62,7 @@
                 長崎県
             </h1>
             <hr width="100%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="長崎県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="長崎県">
         </div>
     </a>
     <a href="kumamoto.php" class="kannkouti">
@@ -71,7 +71,7 @@
                 熊本県
             </h1>
             <hr width="100%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="熊本県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="熊本県">
         </div>
     </a>
     <a href="ooita.php" class="kannkouti">
@@ -80,7 +80,7 @@
                 大分県
             </h1>
             <hr width="100%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="大分県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="大分県">
         </div>
     </a>
     <a href="miyazaki.php" class="kannkouti1">
@@ -89,7 +89,7 @@
                 宮崎県
             </h1>
             <hr width="100%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
         </div>
     </a>
     <a href="kagosima.php" class="kannkouti1">
@@ -98,7 +98,7 @@
                 鹿児島県
             </h1>
             <hr width="100%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="鹿児島県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="鹿児島県">
         </div>
     </a>
     <a href="okinawa.php" class="kannkouti1">
@@ -107,7 +107,7 @@
                 沖縄県
             </h1>
             <hr width="100%" color="black" size="0">
-            <img src="../../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
+            <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
         </div>
     </a>
 </li>

@@ -3,13 +3,7 @@
 session_start();
 //セッションの中身確認（削除）
 print_r($_SESSION);
-if(isset($_SESSION['re'])){
-    echo <<<EOM
-        <script type="text/javascript">
-        location.reload();
-        </script>
-    EOM;
-}
+
 //ローカルライブラリに接続
 require_once '../method.php';
 if(isset($_SESSION['message'])){
@@ -55,21 +49,11 @@ foreach ($name as $row){
 <body>
     <div class="header">
         <div class="img">
-            <img src="img/logo1.png" id="change" alt="" title="九州旅行記" width="150" height="50" >
+            <img src="img/logo1.png" alt="" title="九州旅行記" width="150" height="50" >
         </div>
 
         <div class="img2">
-            <a href="../login/kaiin-login.php" ><img src="img/login.png" onload="change()" alt="" id="mypage" title="ログインアイコン" width="80" height="35" ></a>
-            <script>
-                function change(){
-
-                    if(<?php echo isset($_SESSION['login']) ?>){
-                        document.getElementById("mypage").src = "img/mypageglogo.png";
-                    }
-                }
-
-
-            </script>
+            <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
         </div>
     </div><!--ヘッダー終わり-->
     <p class="box"> </p>
@@ -192,14 +176,14 @@ foreach ($name as $row){
         <div class="kategori">
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="">福岡県</a></li>
-                <li><a href="">佐賀県</a></li>
-                <li><a href="">長崎県</a></li>
-                <li><a href="">熊本県</a></li>
-                <li><a href="">大分県</a></li>
-                <li><a href="">宮崎県</a></li>
-                <li><a href="">鹿児島県</a></li>
-                <li><a href="">沖縄県</a></li>
+                <li><a href="../kannkouti/syouhinn.php">福岡県</a></li>
+                <li><a href="../kannkouti/syouhinn2.php">佐賀県</a></li>
+                <li><a href="../kannkouti/syouhinn3.php">長崎県</a></li>
+                <li><a href="../kannkouti/syouhinn4.php">熊本県</a></li>
+                <li><a href="../kannkouti/syouhinn5.php">大分県</a></li>
+                <li><a href="../kannkouti/syouhinn6.php">宮崎県</a></li>
+                <li><a href="../kannkouti/syouhinn7.php">鹿児島県</a></li>
+                <li><a href="../kannkouti/syouhinn8.php">沖縄県</a></li>
 
             </ul>
             <p>観光地↓</p>
@@ -271,7 +255,6 @@ foreach ($name as $row){
             return false;
         });
     });</script>
-    <script src="script/script.js"></script>
-</body>
 
+</body>
 </html>

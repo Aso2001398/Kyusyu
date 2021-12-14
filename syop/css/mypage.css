@@ -1,3 +1,28 @@
 body{
-    background-color:gray;
+
+}
+.account{
+    border: solid 1px black;
+    width: 800px;
+    padding: 10px 10px 10px 10px;
+}
+.rireki{
+    border: 1px solid black;
+    background-color: #d9f0f7;
+    width: 100px;
+    text-align: center;
+}
+.rogout{
+    border: 1px solid black;
+    background-color: #d9f0f7;
+    width: 100px;
+    text-align: center;
+}
+.taikai{
+    border: solid 1px black;
+    background-color: #d9f0f7;
+    width: 100px;
+    text-align: center;
+
+;
 }

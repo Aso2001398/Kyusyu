@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>マイページ</title>
-    <link rel="stylesheet" href="css/item_delete.css">
+    <link rel="stylesheet" href="css/mypage.css">
+    <link rel="stylesheet" href="../syop/css/backbutton.css">
 <body>
-<button type="button" onclick=history.back()>←戻る</button>
+<button type="button"  class="original" onclick=history.back()>←戻る</button>
 
-<div class="img">
-    <img src="img/logo1.png" alt="" title="九州旅行記" width="180" height="100" >
-</div>
+
 
 <div class="account">
     <p id="account_1">アカウント情報</p>
     <p>名前 : <?php echo $_SESSION['name']?></p>
     <p>メールアドレス : <?php echo $_SESSION['mail']?></p>
-    <a href="../login/logout.php">ログアウト</a>
-    <a href="../login/taikai.php">退会</a>
+
+    <a href="../EC/OrderHistory.php"><p class="rireki">注文履歴</p></a>
+    <a href="../login/logout.php"><p class="rogout">ログアウト</p></a>
+    <a href="../login/taikai.php"><p class="taikai">退会</p></a>
 </div>
 <div class="button_rireki">
 </div>
