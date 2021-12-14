@@ -4,18 +4,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <meta charset="UTF-8">
     <title>沖縄県</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style6.css">
 </head>
 <body>
-<!--<a href="" class="original">←　戻る</a>--><button type="button" class="original" onclick=history.back()>←戻る</button>
+<a href="" class="original">←　戻る</a>
 <div class="picture">
-    <a href="../syop/top.php"><img src="img/rogo.png" width="150" height="50"></a>
+    <img src="img/rogo.png">
 </div>
-<br><br><br>
 <script language="JavaScript">
     function setBG(n)
     {
-        var img_src = "../syop/img/okinawa/mannzamou2.jpg"
+        var img_src = "img/okinawa/mannzamou2.jpg"
         var img_name = "万座毛";
         var img_explanation ="（まんざもう）は、沖縄県国頭郡恩納村にある名勝地。恩納村のほぼ中央、東シナ海に面した標高約20メートルの琉球石灰岩からなる絶壁で、象の鼻に似た奇岩がある。崖上は芝生台地となっている。沖縄海岸国定公園である";
         document.getElementById("image_change").src = img_src;
@@ -24,7 +23,7 @@
     }
     function setCG(n)
     {
-        var img_src = "../syop/img/okinawa/sikinaenn.jpeg"
+        var img_src = "img/okinawa/sikinaenn.jpeg"
         var img_name = "識名園";
         var img_explanation ="（しきなえん）は沖縄県那覇市真地にある琉球庭園の一つ。" +
             "識名の御殿（しちなぬうどぅん）とも、また首里城の南にあることから南苑（なんえん）とも呼ばれた。造園は琉球の第二尚氏王朝、尚穆（在位・1752年 - 1795年）の時代に始まったと言われるが定かではない。完成は尚温の時代の1799年。" +
@@ -39,7 +38,7 @@
     }
     function setDG(n)
     {
-        var img_src = "../syop/img/okinawa/ueguu.jpg"
+        var img_src = "img/okinawa/ueguu.jpg"
         var img_name = "波上宮";
         var img_explanation ="（なみのうえぐう）は、沖縄県那覇市にある神社。近代社格制度では官幣小社に列格され、現在では神社本庁の別表神社に指定されている。" +
             "那覇港を望む高台の上に位置し、「なんみんさん」「ナンミン」として親しまれてきた。琉球八社の一つで、全国一の宮会より琉球国新一の宮に認定されている。";
@@ -52,16 +51,16 @@
     <li>
         <div class="change1">
         </div>
-        <img src="../syop/img/okinawa/mannzamou2.jpg" class="change" onclick="setBG()" width="150" height="217" alt="">
-        <img src="../syop/img/okinawa/sikinaenn.jpeg" class="change2" onclick="setCG(2)" width="150" height="217" alt="">
-        <img src="../syop/img/okinawa/ueguu.jpg" class="change3" onclick="setDG(3)" width="150" height="217" alt="">
+        <img src="img/okinawa/mannzamou2.jpg" class="change" onclick="setBG()" width="150" height="217" alt="">
+        <img src="img/okinawa/sikinaenn.jpeg" class="change2" onclick="setCG(2)" width="150" height="217" alt="">
+        <img src="img/okinawa/ueguu.jpg" class="change3" onclick="setDG(3)" width="150" height="217" alt="">
     </li>
 </ul>
 <div class="picture1">
-    <img id="image_change" src="../syop/img/okinawa/mannzamou2.jpg" width="1500" height="1200">
+    <img id="image_change" src="img/okinawa/mannzamou2.jpg" width="1700" height="900">
 </div>
 <script type="text/javascript">
-    img = new Array("../syop/img/okinawa/mannzamou2.jpg","../syop/img/okinawa/sikinaenn.jpeg","../syop/img/okinawa/ueguu.jpg"); //*(1)
+    img = new Array("img/okinawa/mannzamou2.jpg","img/okinawa/sikinaenn.jpeg","img/okinawa/ueguu.jpg"); //*(1)
     count = -1; //*(2)
     imgTimer();
 
@@ -83,83 +82,96 @@
 <p id="explanation" class="tired">
     （まんざもう）は、沖縄県国頭郡恩納村にある名勝地。恩納村のほぼ中央、東シナ海に面した標高約20メートルの琉球石灰岩からなる絶壁で、象の鼻に似た奇岩がある。崖上は芝生台地となっている。沖縄海岸国定公園である
 </p>
-<ul class="spot-list" >
-    <li>
-        <a href="../kannkouti/hukuoka.php" class="kannkouti">
+<div class="spot-text1">
+        <a href="hukuoka.php" class="kannkouti">
             <div class="spot-text">
                 <h1 class="button">
                     福岡県
                 </h1>
-
-                <img src="../syop/img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/fukuoka/mozikouretoro.jpg" class="kannkou" width="200" height="200" alt="福岡県">
             </div>
         </a>
-        <a href="../kannkouti/saga.php" class="kannkouti">
+</div>
+<div class="spot-text2">
+        <a href="saga.php" class="kannkouti">
             <div class="spot-text">
                 <h1 class="button">
                     佐賀県
                 </h1>
-
-                <img src="../syop/img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
+                <hr width="99%" color="black" size="0">
+                <img src="img/saga/kyuunennann.png" class="kannkou" width="200" height="200" alt="佐賀県">
             </div>
         </a>
-        <a href="../kannkouti/nagasaki.php" class="kannkouti">
+</div>
+<div class="spot-text3">
+        <a href="nagasaki.php" class="kannkouti">
             <div class="spot-text">
                 <h1 class="button">
                     長崎県
                 </h1>
-
-                <img src="../syop/img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/nagasaki/iwadozinnja.jpeg" class="kannkou" width="200" height="200" alt="長崎県">
             </div>
         </a>
-        <a href="../kannkouti/kumamoto.php" class="kannkouti">
+</div>
+<div class="spot-text4">
+        <a href="kumamoto.php" class="kannkouti">
             <div class="spot-text">
                 <h1 class="button">
                     熊本県
                 </h1>
-
-                <img src="../syop/img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/kumamoto/amakusagobasi.jpg" class="kannkou" width="200" height="200" alt="熊本県">
             </div>
         </a>
-        <br>
-        <a href="../kannkouti/ooita.php" class="kannkouti">
+</div>
+<div class="spot-text5">
+        <a href="ooita.php" class="kannkouti">
             <div class="spot-text">
                 <h1 class="button">
                     大分県
                 </h1>
-
-                <img src="../syop/img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/ooita/yamanami2.jpg" class="kannkou" width="200" height="200" alt="大分県">
             </div>
         </a>
-        <a href="../kannkouti/miyazaki.php" class="kannkouti">
+</div>
+<div class="spot-text6">
+        <a href="miyazaki.php" class="kannkouti1">
             <div class="spot-text">
                 <h1 class="button">
                     宮崎県
                 </h1>
-                <img src="../syop/img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/miyazaki/aosimazinnja2.jpg" class="kannkou" width="200" height="200" alt="宮崎県">
             </div>
         </a>
-        <a href="../kannkouti/kagosima.php" class="kannkouti">
+</div>
+<div class="spot-text7">
+        <a href="kagosima.php" class="kannkouti1">
             <div class="spot-text">
                 <h1 class="button">
                     鹿児島県
                 </h1>
-
-                <img src="../syop/img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/kagosima/amamioosima3.jpeg" class="kannkou" width="200" height="200" alt="鹿児島県">
             </div>
         </a>
-        <a href="../kannkouti/okinawa.php" class="kannkouti">
+</div>
+<div class="spot-text8">
+        <a href="okinawa.php" class="kannkouti1">
             <div class="spot-text">
                 <h1 class="button">
                     沖縄県
                 </h1>
-                <img src="../syop/img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
+                <hr width="100%" color="black" size="0">
+                <img src="img/okinawa/mannzamou2.jpg" class="kannkou" width="200" height="200" alt="沖縄県">
             </div>
         </a>
-    </li>
-</ul>
+</div>
 <h1>
-    <a href="" class="omiyage">＞お土産</a>
+    <a href="syouhinn8.php" class="omiyage">＞お土産</a>
 </h1>
 </body>
 </html>
