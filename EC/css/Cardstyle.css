@@ -221,3 +221,10 @@ input{
     font-weight: bold;
     text-align:center;
 }
+.butt{
+    margin-left:50px;
+    width:20%;
+    height: 40px;
+    background:gold;
+    border-radius: 30px;
+}

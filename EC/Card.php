@@ -114,7 +114,7 @@ if(isset($_SESSION['cart_mes'])){
         <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
         <td class="tdsix"><button class="del">削除</button></td>
     </tr>
-    <tr><td   colspan="6"; class="talast"><span>商品は <span class="goods_num">0</span> 点; 合計金額：￥ <span class="pricetal">0</span></td></tr>
+    <tr><td   colspan="6"; class="talast"><span>商品は <span class="goods_num">0</span> 点; 合計金額：￥ <span class="pricetal">0</span><button class="butt">購入に進む</button></td></tr>
     </tbody>
 </table>
 </body>
