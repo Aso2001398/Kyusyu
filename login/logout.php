@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php
+session_start();
+$_SESSION['log']='out';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,29 +37,9 @@
                     <div class ="mokujii">
                         <h1>ログアウトしますか？</h1>
                     </div>
-                    <button class = "btn1" onclick="cancel();">取消</button>
-                    <button class = "btn2" onclick="signOut();">確認</button>
-                    <script>
-                        function cancel(){
-                            window.location.href = '../syop/top.php';
-                        }
+                    <button class = "btn1" onclick="window.location.href = '../syop/mypage.php'">取消</button>
+                    <button class = "btn2" onclick="window.location.href = '../login/enter.php'">確認</button>
 
-                        function signOut() {
-                            <?php $_SESSION = array(); $_SESSION['message'] = 'ログアウトしました'?>
-                            var auth2 = gapi.auth2.getAuthInstance();
-                            auth2.signOut().then(function () {
-                                console.log('User signed out.');
-                            });
-                            window.location.href = '../syop/top.php';
-                        }
-
-                        function onLoad() {
-                            gapi.load('auth2', function() {
-                                gapi.auth2.init();
-                            });
-                        }
-
-                    </script>
 
                 </div>
         </div>

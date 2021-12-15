@@ -1,4 +1,10 @@
-<?php session_start();print_r($_SESSION)?>
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+    header("Location:../login/kaiin-login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -93,7 +93,7 @@ $pdo = DB_connect();
                                 <a href="javascript:form1[{$i}].submit()">
                                 <div class="new_goodsblox">
                                         <div class="NewGoods_img">
-                                            <img src="../admin_kari/img/item/{$item['image_name']}" width="400" height="150" >
+                                            <img src="../admin_kari/img/item/{$item['image_name']}" height="150" >
                                         </div>
                                     <div class="NewGoodsDate">
                                         <p class="name">商品名：{$item['item_name']}</p></a>
@@ -105,10 +105,16 @@ $pdo = DB_connect();
                                 <input type="hidden" name="item_name" value="{$item['item_name']}">  
                             </form>     
                     </div>
+                    <div class="item">
+                    <div class="float_box">
+                        <ul>
                EOM;
+              $i++;
+              continue;
           }else if($i==3){
               echo '<li></li>';
           }
+
           echo <<<EOM
                         <li> <!-- [▼] アイテム -->
                             <form action="../syop/syohinsyousai.php" name="form1" method="post">   
@@ -128,70 +134,15 @@ $pdo = DB_connect();
       ?>
 
 
-    <div class="item">
-        <div class="float_box">
-          <ul>
-            <li> <!-- [▼] アイテム -->
-              <a href="../syop/syohinsyousai.php">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>
-            </li> <!-- [▲] アイテム -->
-            <li> <!-- [▼] アイテム -->
-              <a href="../syop/syohinsyousai.php">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>
-            </li> <!-- [▲] アイテム -->
-            <li> <!-- [▼] アイテム -->
-              <a href="../syop/syohinsyousai.php">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>
-            </li> <!-- [▲] アイテム -->
-            <li> <!-- [▼] アイテム -->
-              <!--<a href="#">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>-->
-            </li> <!-- [▲] アイテム -->
-            <li> <!-- [▼] アイテム -->
-              <a href="../syop/syohinsyousai.php">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>
-            </li> <!-- [▲] アイテム -->
-            <li> <!-- [▼] アイテム -->
-              <a href="../syop/syohinsyousai.php">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>
-            </li> <!-- [▲] アイテム -->
-            <li> <!-- [▼] アイテム -->
-              <a href="../syop/syohinsyousai.php">
-                <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                <p class="name">TURUNOKO</p>
-                <p class="item_date" >おいしいおいしいおいしい</p>
-                <p class="price">&yen;1,980</p>
-              </a>
-            </li> <!-- [▲] アイテム -->
+
+
+            
           </ul>
 
 
         </div>
     </div>
   </div>
+</main>
 </body>
 </html>

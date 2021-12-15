@@ -1,4 +1,16 @@
-<?php session_start()?>
+<?php
+session_start();
+$_SESSION['log']='tai';
+
+
+//ローカルライブラリに接続
+require_once '../method.php';
+
+//DB接続
+$pdo = new PDO('mysql:host=mysql154.phy.lolipop.lan;
+                dbname=LAA1290554-kyusyu;charser=utf8',
+    'LAA1290554', '1234');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,29 +46,9 @@
                     <div class ="mokujii">
                         <h1>退会しますか？</h1>
                     </div>
-                    <button class = "btn1" onclick="cancel();">取消</button>
-                    <button class = "btn2" onclick="signOut();">確認</button>
-                    <script>
-                        function cancel(){
-                            window.location.href = '../syop/top.php';
-                        }
+                    <button class = "btn1" onclick="window.location.href = '../syop/mypage.php'">取消</button>
+                    <button class = "btn2" onclick="window.location.href = '../login/enter.php'">確認</button>
 
-                        function signOut() {
-                            <?php $_SESSION = array(); $_SESSION['message'] = 'ログアウトしました'?>
-                            var auth2 = gapi.auth2.getAuthInstance();
-                            auth2.signOut().then(function () {
-                                console.log('User signed out.');
-                            });
-                            window.location.href = '../syop/top.php';
-                        }
-
-                        function onLoad() {
-                            gapi.load('auth2', function() {
-                                gapi.auth2.init();
-                            });
-                        }
-
-                    </script>
 
                 </div>
         </div>
