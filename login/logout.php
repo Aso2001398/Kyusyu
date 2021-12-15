@@ -25,7 +25,7 @@
     <body>
     <button  class="button" onclick=history.back()>戻る</button>
     <div class="logo">
-        <img src="taikai/logo1.png" title="九州旅行記" width="400" height="200" >
+        <img src="../syop/img/logo1.png" title="九州旅行記" width="400" height="200" >
     </div>
     <div class = "nav">
         <div>
