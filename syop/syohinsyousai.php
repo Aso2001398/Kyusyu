@@ -41,7 +41,7 @@ if(!isset($_POST['item_name'])) {
     <div class="img2">
         <a href="../login/kaiin-login.php" ><img src="img/login.png" alt="" title="ログインアイコン" width="80" height="35" ></a>
     </div>
-    <div class="img3">.
+    <div class="img3">
         <a href="../EC/Card.php" ><img src="img/cart.png" alt="" title="カートアイコン" width="50" height="35" ></a>
     </div>
 </div>

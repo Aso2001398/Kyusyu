@@ -88,26 +88,22 @@ $pdo = DB_connect();
               echo <<<EOM
                     <div class="new_goods">
                             
-                            <p class="sinchaku">新着商品</p>　
+                            <p class="sinchaku">新着商品</pclass>　
                             <form action="../syop/syohinsyousai.php" class="form2" method="post">
                                 <a href="javascript:form1[{$i}].submit()">
-                                <img src="../admin_kari/img/item/{$item['image_name']}"class="NewGoods_img" width="400" height="150" >
-                                <div class="NewGoodsDate"><p>
-                                    <p class="name">商品名：{$item['item_name']}</p>
-                                    <p class="item_date" >{$data}</p>
-                                    <p class="price">価格：&yen;{$item['price']}</p>
-                                    </p>
+                                <div class="new_goodsblox">
+                                        <div class="NewGoods_img">
+                                            <img src="../admin_kari/img/item/{$item['image_name']}" width="400" height="150" >
+                                        </div>
+                                    <div class="NewGoodsDate">
+                                        <p class="name">商品名：{$item['item_name']}</p></a>
+                                        <p class="item_date" >{$data}</p>
+                                        <p class="price">価格：&yen;{$item['price']}</p>
+                                    
+                                </div>
                                 </div>
                                 <input type="hidden" name="item_name" value="{$item['item_name']}">  
-                            </form>
-                            <a href="" >
-                            <img src="item_img/Fukuoka_Tsurunoko.img" alt="" title="福岡鶴乃子" class="NewGoods_img" width="400" height="150" >
-                            <div class="NewGoodsDate"><p>
-                                <p class="name">商品名：</p><a href=""></a>
-                                <p>  <!--商品説明--></p>
-                                <p class="price">価格：</p>
-                                </p>
-                            </div>
+                            </form>     
                     </div>
                EOM;
           }else if($i==3){
