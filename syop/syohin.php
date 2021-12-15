@@ -126,17 +126,7 @@ $pdo = DB_connect();
           $i++;
       }
       ?>
-    <div class="new_goods">
 
-        <p class="sinchaku">新着商品</p>　
-        <a href="" ><img src="item_img/Fukuoka_Tsurunoko.img" alt="" title="福岡鶴乃子" class="NewGoods_img" width="400" height="150" ></a>
-            <div class="NewGoodsDate"><p>
-                  <p class="name">商品名：</p><a href=""></a>
-                  <p>  <!--商品説明--></p>
-                  <p class="price">価格：</p>
-                  </p>
-            </div>
-    </div>
 
     <div class="item">
         <div class="float_box">

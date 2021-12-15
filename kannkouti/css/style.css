@@ -291,7 +291,7 @@ font-size: 20px;
     border-color  : mediumturquoise;
     transform     : scale(1.01);
 }
-*/
+
 
 .kannkou{
     position: relative;
@@ -420,6 +420,7 @@ font-size: 20px;
     position: relative;
     top: 400px;
     left: 60px;
+    text-decoration: none;
 
 }
 
