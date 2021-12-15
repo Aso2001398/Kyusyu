@@ -13,7 +13,7 @@
     <!--<a href="" class="btn btn-border">戻る</a>-->
 
     <div class="img">
-        <img src="img/rogo.png" alt="" title="九州旅行記" width="150" height="50" >
+        <a href="../syop/top.php"> <img src="img/rogo.png" alt="" title="九州旅行記" width="150" height="50" ></a>
     </div>
     <div class="search">
         <form action="../syop/search.php" method="post">

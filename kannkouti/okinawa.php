@@ -159,7 +159,7 @@
     </li>
 </ul>
 <h1>
-    <a href="" class="omiyage">＞お土産</a>
+    <a href="syouhinn8.php" class="omiyage">＞お土産</a>
 </h1>
 </body>
 </html>

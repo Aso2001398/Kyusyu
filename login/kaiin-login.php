@@ -65,18 +65,17 @@ if(isset($_SESSION['message'])){
                 <script>
                     function onSignIn(googleUser) {
                         profile = googleUser.getBasicProfile();
-                        console.log('ID: ' + profile.getId());
+                        console.log('ID: ' + profile.getEmail());
                         var xhr = new XMLHttpRequest();
                         xhr.open('POST', 'http://aso2001398.mods.jp/php2/Kyusyu/login/google_login.php');
                         xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
                         xhr.send('name=' + profile.getName() + '&mail=' + profile.getEmail());
-                        window.location.href = '../syop/top.php'
+                        document.getElementById("mes").innerText = "ログインしました。5秒後に遷移します";
+                        setTimeout(function() {window.location.href='../syop/top.php'},5000);
                     }
-
                 </script>
-
             </div>
-
+            <p id="mes" style="text-align: center"></p>
         </div>
     </div>
     </div>

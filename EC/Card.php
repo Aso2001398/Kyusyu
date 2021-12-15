@@ -1,3 +1,18 @@
+<?php
+session_start();
+if(isset($_SESSION['cart_mes'])){
+    echo <<<EOM
+        <script type="text/javascript">
+        window.onload = function (){
+            alert("{$_SESSION['cart_mes']}");
+        }
+        </script>
+    EOM;
+    $_SESSION['cart_mes'] = null;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
