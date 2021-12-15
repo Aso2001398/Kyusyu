@@ -10,7 +10,11 @@ if(isset($_SESSION['cart_mes'])){
     EOM;
     $_SESSION['cart_mes'] = null;
 }
+//ローカルライブラリに接続
+require_once '../method.php';
 
+//DB接続
+$pdo = DB_connect();
 ?>
 
 <!DOCTYPE html>
@@ -58,6 +62,45 @@ if(isset($_SESSION['cart_mes'])){
     </tr>
     </thead>
     <tbody>
+    <?php
+    $size = 'height="100vh"';
+    $items=$pdo -> prepare('SELECT * FROM cart where user_id = ? order by cart_id');
+    $items->bindValue(1,$_SESSION['user_id'],PDO::PARAM_STR);
+    $items->execute();
+    $result=$items->fetch(PDO::FETCH_ASSOC);
+    foreach ($items as $item){
+        $items=$pdo -> prepare('SELECT * FROM cart where user_id = ? order by cart_id');
+        $items->bindValue(1,$_SESSION['user_id'],PDO::PARAM_STR);
+        $items->execute();
+        $data=$item['item_data'];
+        if($item['delete_check']){
+            continue;
+        }
+        echo <<<EOM
+                        <li> <!-- [▼] アイテム -->
+                            <form action="../syop/syohinsyousai.php" name="form1" method="post">   
+                                <a href="javascript:form1[{$i}].submit()">
+                                    <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="image">
+                                    <p class="name">{$item['item_name']}</p>
+                                    <p class="item_date" >{$data}</p>
+                                    <p class="price">&yen;{$item['price']}</p>
+                                    
+                                </a>  
+                                <input type="hidden" name="item_name" value="{$item['item_name']}">
+                            </form>
+                        </li> <!-- [▲] アイテム -->
+                        <tr class="trclass">
+                                <td class="tdone xuhao"><img src="../admin_kari/img/item/{$item['image_name']}" {$size}></td>
+                                <td class="tdtwo ">{$item['']}</td>
+                                <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
+                                <td class="tdfour"><span>￥：</span><span class="unit">599</span></td>
+                                <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
+                                <td class="tdsix"><button class="del">削除</button></td>
+                        </tr>
+                    EOM;
+        $i++;
+    }
+    ?>
     <tr class="trclass">
         <td class="tdone xuhao"><img src="img/img1.jpg" width="80px"/></td>
         <td class="tdtwo ">ゴマサバ</td>
