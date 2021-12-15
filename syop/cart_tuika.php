@@ -15,21 +15,27 @@ if(!isset($_SESSION['login'])){
     exit();
 }
 
-$se=$pdo->prepare('select * from member where mail = :mail');
-$se->bindValue(':mail', $_SESSION['mail'], PDO::PARAM_STR);
-$se->execute();
-$result=$se->fetch(PDO::FETCH_ASSOC);
 
 $item=$pdo->prepare('select * from item where item_name = ?');
 $item->bindValue(1,$_POST['item_name'],PDO::PARAM_STR);
 $item->execute();
-$result2=$item->fetch(PDO::FETCH_ASSOC);
+$result=$item->fetch(PDO::FETCH_ASSOC);
 
+$cart=$pdo->prepare('select * from cart where user_id = ?');
+$cart->bindValue(1, $_SESSION['user_id'], PDO::PARAM_STR);
+$cart->execute();
+foreach($cart as $art){
+    if($art['item_id']==$result['item_id']){
+        $_SESSION['cart_mes'] = 'すでにカートに入っています';
+        header("Location: ../EC/Card.php");
+        exit();
+    }
+}
 
-$in=$pdo->prepare('insert into cart(user_id,item_id) values (:user,:item)');
-$in->bindValue(':user',$result['user_id'],PDO::PARAM_STR);
-$in->bindValue(':item',$result2['item_id'],PDO::PARAM_STR);
-$item->execute();
+$in=$pdo->prepare('INSERT INTO cart(user_id,item_id) VALUES(?,?)');
+$in->bindValue(1,$_SESSION['user_id'],PDO::PARAM_STR);
+$in->bindValue(2,$result['item_id'],PDO::PARAM_STR);
+$in->execute();
 
 $_SESSION['cart'] = null;
 header("Location: ../EC/Card.php");

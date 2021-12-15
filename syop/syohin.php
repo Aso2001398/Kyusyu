@@ -89,18 +89,19 @@ $pdo = DB_connect();
                     <div class="new_goods">
                             
                             <p class="sinchaku">新着商品</p>　
-                            <form action="../syop/syohinsyousai.php" class="form2" method="post">   
+                            <form action="../syop/syohinsyousai.php" class="form2" method="post">
                                 <a href="javascript:form1[{$i}].submit()">
-                                    <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="NewGoods_img" width="400" height="150" >
+                                <img src="../admin_kari/img/item/{$item['image_name']}"class="NewGoods_img" width="400" height="150" >
+                                <div class="NewGoodsDate"><p>
                                     <p class="name">商品名：{$item['item_name']}</p>
                                     <p class="item_date" >{$data}</p>
                                     <p class="price">価格：&yen;{$item['price']}</p>
-                                    
-                                </a>  
-                                <input type="hidden" name="item_name" value="{$item['item_name']}">
+                                    </p>
+                                </div>
+                                <input type="hidden" name="item_name" value="{$item['item_name']}">  
                             </form>
                             <a href="" >
-                            <img src="item_img/Fukuoka_Tsurunoko.img" alt="" title="福岡鶴乃子" class="NewGoods_img" width="400" height="150" ></a>
+                            <img src="item_img/Fukuoka_Tsurunoko.img" alt="" title="福岡鶴乃子" class="NewGoods_img" width="400" height="150" >
                             <div class="NewGoodsDate"><p>
                                 <p class="name">商品名：</p><a href=""></a>
                                 <p>  <!--商品説明--></p>
