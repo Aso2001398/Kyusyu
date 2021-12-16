@@ -153,7 +153,7 @@ function setDG(n)
 </ul>
 
 <h1>
-    <a href="syouhinn.php" class="omiyage">＞お土産</a>
+    <a href="syouhinn_fukuoka.php" class="omiyage">＞お土産</a>
 </h1>
 
 </body>

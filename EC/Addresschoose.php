@@ -1,3 +1,11 @@
+<?php
+session_start();
+//ローカルライブラリに接続
+require_once '../method.php';
+
+//DB接続
+$pdo = DB_connect();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,34 +26,39 @@
 <form action="Pay.php" method="post">
 <div class="A1">
     <ul>
-        <li class="info0_2"><a>名前：麻生太郎</a></li>
-        <li class="info0_3"><a>郵便番号：0000000</a></li>
-        <li class="info0_4"><a>住所：福岡県福岡市博多駅南1-1-1</a></li>
+        <?php
+        $mail=$pdo -> prepare('SELECT * FROM member where user_id = ?');
+        $mail->bindValue(1,$_SESSION['user_id'],PDO::PARAM_STR);
+        $mail->execute();
+        $user=$mail->fetch();
+        echo <<<EOM
+            <li class="info0_2"><a>名前：{$user['true_name']}</a></li>
+            <li class="info0_3"><a>郵便番号：{$user['yubin']}</a></li>
+            <li class="info0_4"><a>住所：{$user['address']}</a></li>
+        EOM;
+        ?>
+
     </ul>
 </div>
 <div class="A2">
     <button class="butt">この住所を選択</button>
 </div>
-<div class="A3">
-    <a href=""> <button class="butt1">支払方法を選択</button></a>
-</div>
+</form>
 <hr>
-<h1>住所を追加</h1>
-<form action="" method="post">
+<h1>住所を変更</h1>
+<form action="address_tuika.php" method="post">
     <div>
         <label for="i_name">お名前</label><br>
-        <input id="i_name" type="text" name="name" value="">
+        <input id="i_name" type="text" name="name" value="" required>
         <br>
-        <label for="i_yubinbango">郵便番号</label><br>
-    <input type="text" name="zip22" size="9" maxlength="8" onKeyUp="AjaxZip3.zip2addr('zip21','zip22','addr21','addr21');" >
+        <label for="i_yubinbango">郵便番号（ハイフン無し）</label><br>
+    <input type="text" name="yubin" size="9" maxlength="8" onKeyUp="AjaxZip3.zip2addr('zip21','zip22','addr21','addr21');" required>
     <br>
     <label for="i_todo">住所</label><br>
-    <input type="text" name="addr21" size="100">
+    <input type="text" name="address" size="100" required>
 
-        <button name="newAddress">住所を追加</button>
+        <button type="submit" name="newAddress">住所を追加</button>
     </div>
-
-
-
+</form>
 </body>
 </html>

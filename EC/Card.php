@@ -62,102 +62,40 @@ $pdo = DB_connect();
     </tr>
     </thead>
     <tbody>
-    <?php
-    $size = 'height="100vh"';
-    $items=$pdo -> prepare('SELECT * FROM cart where user_id = ? order by cart_id');
-    $items->bindValue(1,$_SESSION['user_id'],PDO::PARAM_STR);
-    $items->execute();
-    $result=$items->fetch(PDO::FETCH_ASSOC);
-    foreach ($items as $item){
+    <form method="post">
+        <?php
+        $i=1;
+        $size = 'height="100vh"';
         $items=$pdo -> prepare('SELECT * FROM cart where user_id = ? order by cart_id');
         $items->bindValue(1,$_SESSION['user_id'],PDO::PARAM_STR);
         $items->execute();
-        $data=$item['item_data'];
-        if($item['delete_check']){
-            continue;
+        foreach ($items as $item){
+            $tems=$pdo -> prepare('SELECT * FROM item where item_id = ?');
+            $tems->bindValue(1,$item['item_id'],PDO::PARAM_STR);
+            $tems->execute();
+            $result2=$tems->fetch(PDO::FETCH_ASSOC);
+            if($result2['delete_check']){
+                continue;
+            }
+            echo <<<EOM
+            <tr class="trclass">
+                
+                <td class="tdone xuhao"><img src="../admin_kari/img/item/{$result2['image_name']}" {$size}></td>
+                <td class="tdtwo ">{$result2['item_name']}</td>
+                <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
+                <td class="tdfour"><span>￥：</span><span class="unit">{$result2['price']}</span></td>
+                <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
+                <td class="tdsix"><input type="submit" value="削除" formaction="cart_delete.php" formmethod="POST"/></td>
+            </tr>
+            
+            EOM;//<input type="text" id="sum" name="syou$i" class="sum" value="0">
+            $i++;
         }
-        echo <<<EOM
-                        <li> <!-- [▼] アイテム -->
-                            <form action="../syop/syohinsyousai.php" name="form1" method="post">   
-                                <a href="javascript:form1[{$i}].submit()">
-                                    <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="image">
-                                    <p class="name">{$item['item_name']}</p>
-                                    <p class="item_date" >{$data}</p>
-                                    <p class="price">&yen;{$item['price']}</p>
-                                    
-                                </a>  
-                                <input type="hidden" name="item_name" value="{$item['item_name']}">
-                            </form>
-                        </li> <!-- [▲] アイテム -->
-                        <tr class="trclass">
-                                <td class="tdone xuhao"><img src="../admin_kari/img/item/{$item['image_name']}" {$size}></td>
-                                <td class="tdtwo ">{$item['']}</td>
-                                <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-                                <td class="tdfour"><span>￥：</span><span class="unit">599</span></td>
-                                <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-                                <td class="tdsix"><button class="del">削除</button></td>
-                        </tr>
-                    EOM;
-        $i++;
-    }
-    ?>
-    <tr class="trclass">
-        <td class="tdone xuhao"><img src="img/img1.jpg" width="80px"/></td>
-        <td class="tdtwo ">ゴマサバ</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">599</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr class="trclass">
-        <td class="tdone xuhao"><img src="img/img2.jpg" width="80px"/></td>
-        <td class="tdtwo">KUMAMOTOマカロンズ</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">700</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr class="trclass">
-        <td class="tdone xuhao"><img src="img/img3.jpg" width="80px"/></td>
-        <td class="tdtwo">のむヨーグルト</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">500</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr>
-        <td class="tdone xuhao"><img src="img/img4.jpg" width="80px"/></td>
-        <td class="tdtwo">阿蘇ミルクチーズプリン</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">400</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr class="trclass">
-        <td class="tdone xuhao"><img src="img/img5.jpg" width="80px"/></td>
-        <td class="tdtwo">果物や野菜のもっちー大福</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">399</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr class="trclass">
-        <td class="tdone xuhao"><img src="img/img6.jpg" width="80px"/></td>
-        <td class="tdtwo">馬刺しソフト燻製</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">1200</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr class="trclass">
-        <td class="tdone xuhao"><img src="img/img7.jpg" width="80px"/></td>
-        <td class="tdtwo">天空のしずく</td>
-        <td class="tdthree"><span class="jiajie"><input type="button" value="-"><span class="num">0</span><input type="button" value="+"></span></td>
-        <td class="tdfour"><span>￥：</span><span class="unit">899</span></td>
-        <td class="tdfive"><span>小計：</span><span class="subtal">0</span></td>
-        <td class="tdsix"><button class="del">削除</button></td>
-    </tr>
-    <tr><td   colspan="6"; class="talast"><span>商品は <span class="goods_num">0</span> 点; 合計金額：￥ <span class="pricetal">0</span><button class="butt">購入に進む</button></td></tr>
+        ?>
+
+        <tr><td   colspan="6"; class="talast">商品は <span class="goods_num">0</span> 点; 合計金額：￥ <span class="pricetal">0</span><button class="butt" type="submit"formaction="Addresschoose.php" formmethod="POST"/>購入に進む</button></td></tr>
+    </form>
+
     </tbody>
 </table>
 </body>

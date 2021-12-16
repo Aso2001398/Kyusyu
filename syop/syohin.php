@@ -49,14 +49,14 @@ $pdo = DB_connect();
     <div class="kategori">
       <ul>
         <!--<li><a class="active" href="#home">Home</a></li>-->
-          <li><a href="../kannkouti/syouhinn.php">福岡県</a></li>
-          <li><a href="../kannkouti/syouhinn2.php">佐賀県</a></li>
-          <li><a href="../kannkouti/syouhinn3.php">長崎県</a></li>
-          <li><a href="../kannkouti/syouhinn4.php">熊本県</a></li>
-          <li><a href="../kannkouti/syouhinn5.php">大分県</a></li>
-          <li><a href="../kannkouti/syouhinn6.php">宮崎県</a></li>
-          <li><a href="../kannkouti/syouhinn7.php">鹿児島県</a></li>
-          <li><a href="../kannkouti/syouhinn8.php">沖縄県</a></li>
+          <li><a href="../kannkouti/syouhinn_fukuoka.php">福岡県</a></li>
+          <li><a href="../kannkouti/syouhinn_saga.php">佐賀県</a></li>
+          <li><a href="../kannkouti/syouhinn_nagasaki.php">長崎県</a></li>
+          <li><a href="../kannkouti/syouhinn_kumamoto.php">熊本県</a></li>
+          <li><a href="../kannkouti/syouhinn_ooita.php">大分県</a></li>
+          <li><a href="../kannkouti/syouhinn_miyazaki.php">宮崎県</a></li>
+          <li><a href="../kannkouti/syouhinn_kagosima.php">鹿児島県</a></li>
+          <li><a href="../kannkouti/syouhinn_okinawa.php">沖縄県</a></li>
 
       </ul>
       <p>観光地↓</p>
@@ -80,6 +80,7 @@ $pdo = DB_connect();
       $size = 'height="100vh"';
       $items=$pdo -> query('SELECT * FROM item order by item_id desc');
       foreach ($items as $item){
+          $i2=$i-1;
           $data=$item['item_data'];
           if($item['delete_check']){
               continue;
@@ -89,8 +90,8 @@ $pdo = DB_connect();
                     <div class="new_goods">
                             
                             <p class="sinchaku">新着商品</pclass>　
-                            <form action="../syop/syohinsyousai.php" class="form2" method="post">
-                                <a href="javascript:form1[{$i}].submit()">
+                            <form action="../syop/syohinsyousai.php" class="form1" method="post">
+                                <a href="javascript:form1[$i].submit()">
                                 <div class="new_goodsblox">
                                         <div class="NewGoods_img">
                                             <img src="../admin_kari/img/item/{$item['image_name']}" height="150" >
@@ -111,14 +112,14 @@ $pdo = DB_connect();
                EOM;
               $i++;
               continue;
-          }else if($i==3){
+          }else if($i%3==0){
               echo '<li></li>';
           }
 
           echo <<<EOM
                         <li> <!-- [▼] アイテム -->
                             <form action="../syop/syohinsyousai.php" name="form1" method="post">   
-                                <a href="javascript:form1[{$i}].submit()">
+                                <a href="javascript:form1[{$i2}].submit()">
                                     <img src="../admin_kari/img/item/{$item['image_name']}" {$size} class="image">
                                     <p class="name">{$item['item_name']}</p>
                                     <p class="item_date" >{$data}</p>

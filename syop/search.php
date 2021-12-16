@@ -40,14 +40,14 @@
         <div class="kategori">
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="../kannkouti/syouhinn.php">福岡県</a></li>
-                <li><a href="../kannkouti/syouhinn2.php">佐賀県</a></li>
-                <li><a href="../kannkouti/syouhinn3.php">長崎県</a></li>
-                <li><a href="../kannkouti/syouhinn4.php">熊本県</a></li>
-                <li><a href="../kannkouti/syouhinn5.php">大分県</a></li>
-                <li><a href="../kannkouti/syouhinn6.php">宮崎県</a></li>
-                <li><a href="../kannkouti/syouhinn7.php">鹿児島県</a></li>
-                <li><a href="../kannkouti/syouhinn8.php">沖縄県</a></li>
+                <li><a href="../kannkouti/syouhinn_fukuoka.php">福岡県</a></li>
+                <li><a href="../kannkouti/syouhinn_saga.php">佐賀県</a></li>
+                <li><a href="../kannkouti/syouhinn_nagasaki.php">長崎県</a></li>
+                <li><a href="../kannkouti/syouhinn_kumamoto.php">熊本県</a></li>
+                <li><a href="../kannkouti/syouhinn_ooita.php">大分県</a></li>
+                <li><a href="../kannkouti/syouhinn_miyazaki.php">宮崎県</a></li>
+                <li><a href="../kannkouti/syouhinn_kagosima.php">鹿児島県</a></li>
+                <li><a href="../kannkouti/syouhinn_okinawa.php">沖縄県</a></li>
 
             </ul>
             <p>観光地↓</p>

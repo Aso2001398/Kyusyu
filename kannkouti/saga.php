@@ -156,7 +156,7 @@
     </li>
 </ul>
 <h1>
-    <a href="syouhinn2.php" class="omiyage">＞お土産</a>
+    <a href="syouhinn_saga.php" class="omiyage">＞お土産</a>
 </h1>
 </body>
 </html>

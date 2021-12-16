@@ -160,7 +160,7 @@
 </ul>
 
 <h1>
-    <a href="syouhinn7.php" class="omiyage">＞お土産</a>
+    <a href="syouhinn_kagosima.php" class="omiyage">＞お土産</a>
 </h1>
 </body>
 </html>

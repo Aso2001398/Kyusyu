@@ -14,7 +14,7 @@
 
 <button type="button" class="original" onclick=history.back()>←戻る</button>
 <br><br><br>
-<form action="../EC/check.php" method="post">
+<form action="check.php" method="post">
 <table class="PG" cellspacing="1" bgcolor="#333333"  width="800" cellpadding="50">
     <tr>
         <td bgcolor="#fff" align="left">
@@ -28,7 +28,7 @@
             <BR>
             <div>
                 <input type="radio" name="siharai" value="konbini" required>
-                <label for="kobini">コンビニ支払い</label>
+                <label for="konbini">コンビニ支払い</label>
                 <br>
                 <small>　 ・代金のお支払い後に商品が発送されます。お支払いに必要な番号はメールでお知らせします</small>
             </div>

@@ -28,7 +28,7 @@ if (count($_POST) === 0) {
 else {
     //ユーザー名またはパスワードが送信されて来なかった場合
     if(empty($_POST["id"]) || empty($_POST["pass"])) {
-        $message = "ユーザー名とパスワードを入力してください";
+        $message = "idとパスワードを入力してください";
     }
     //ユーザー名とパスワードが送信されて来た場合
     else {
@@ -41,6 +41,7 @@ else {
         }
         catch (PDOException $e) {
             $message = '指定したIDは存在しません';
+            header("Location: kanri_login.php");
             exit;
         }
 
@@ -58,7 +59,7 @@ else {
                 exit();
             }
         }catch (Exception $e){
-            $message="ユーザー名かパスワードが違います";
+            $message="idかパスワードが違います";
         }
 
     }

@@ -153,7 +153,7 @@
         </a>
     </li>
 </ul>
-<a href="syouhinn3.php" class="omiyage">＞お土産</a>
+<a href="syouhinn_nagasaki.php" class="omiyage">＞お土産</a>
 </h1>
 </body>
 </html>

@@ -56,14 +56,14 @@ if(!isset($_POST['item_name'])) {
         <div class="kategori">
             <ul>
                 <!--<li><a class="active" href="#home">Home</a></li>-->
-                <li><a href="../kannkouti/syouhinn.php">福岡県</a></li>
-                <li><a href="../kannkouti/syouhinn2.php">佐賀県</a></li>
-                <li><a href="../kannkouti/syouhinn3.php">長崎県</a></li>
-                <li><a href="../kannkouti/syouhinn4.php">熊本県</a></li>
-                <li><a href="../kannkouti/syouhinn5.php">大分県</a></li>
-                <li><a href="../kannkouti/syouhinn6.php">宮崎県</a></li>
-                <li><a href="../kannkouti/syouhinn7.php">鹿児島県</a></li>
-                <li><a href="../kannkouti/syouhinn8.php">沖縄県</a></li>
+                <li><a href="../kannkouti/syouhinn_fukuoka.php">福岡県</a></li>
+                <li><a href="../kannkouti/syouhinn_saga.php">佐賀県</a></li>
+                <li><a href="../kannkouti/syouhinn_nagasaki.php">長崎県</a></li>
+                <li><a href="../kannkouti/syouhinn_kumamoto.php">熊本県</a></li>
+                <li><a href="../kannkouti/syouhinn_ooita.php">大分県</a></li>
+                <li><a href="../kannkouti/syouhinn_miyazaki.php">宮崎県</a></li>
+                <li><a href="../kannkouti/syouhinn_kagosima.php">鹿児島県</a></li>
+                <li><a href="../kannkouti/syouhinn_okinawa.php">沖縄県</a></li>
 
             </ul>
             <p>観光地↓</p>
@@ -105,83 +105,53 @@ if(!isset($_POST['item_name'])) {
         </form>
     </div>
 
-
-
-
         <br><br>
         <p class="box"> </p>
         <p class="kaan">関連商品</p>
         <div class="item">
             <div class="float_box">
                 <ul>
-                    <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
-                            <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                            <p class="name">TURUNOKO</p>
-                            <p class="item_date" >おいしいおいしいおいしい</p>
-                            <p class="price">&yen;1,980</p>
-                        </a>
-                    </li> <!-- [▲] アイテム -->
-                    <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
-                            <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                            <p class="name">TURUNOKO</p>
-                            <p class="item_date" >おいしいおいしいおいしい</p>
-                            <p class="price">&yen;1,980</p>
-                        </a>
-                    </li> <!-- [▲] アイテム -->
-                    <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
-                            <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                            <p class="name">TURUNOKO</p>
-                            <p class="item_date" >おいしいおいしいおいしい</p>
-                            <p class="price">&yen;1,980</p>
-                        </a>
-                    </li> <!-- [▲] アイテム -->
-                    <li> <!-- [▼] アイテム -->
-                        <!--<a href="#">
-                          <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                          <p class="name">TURUNOKO</p>
-                          <p class="item_date" >おいしいおいしいおいしい</p>
-                          <p class="price">&yen;1,980</p>
-                        </a>-->
-                    </li> <!-- [▲] アイテム -->
-                    <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
-                            <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                            <p class="name">TURUNOKO</p>
-                            <p class="item_date" >おいしいおいしいおいしい</p>
-                            <p class="price">&yen;1,980</p>
-                        </a>
-                    </li> <!-- [▲] アイテム -->
-                    <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
-                            <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                            <p class="name">TURUNOKO</p>
-                            <p class="item_date" >おいしいおいしいおいしい</p>
-                            <p class="price">&yen;1,980</p>
-                        </a>
-                    </li> <!-- [▲] アイテム -->
-                    <li> <!-- [▼] アイテム -->
-                        <a href="../syop/syohinsyousai.php">
-                            <img src="item_img/Fukuoka_Tsurunoko.img" class="image">
-                            <p class="name">TURUNOKO</p>
-                            <p class="item_date" >おいしいおいしいおいしい</p>
-                            <p class="price">&yen;1,980</p>
-                        </a>
-                    </li> <!-- [▲] アイテム -->
+                    <?php
+                    $ken=$pdo->prepare('select * from item where area = ?');
+                    $ken->bindValue(1,$result['area'],PDO::PARAM_STR);
+                    $ken->execute();
+                    $i=1;
+                    $con=1;
+                    $size = 'height="100vh"';
+                    foreach ($ken as $ke){
+                        $data=$ke['item_data'];
+                        if($ke['delete_check']){
+                            continue;
+                        }
+                        if($ke['item_name'] == $result['item_name']){
+                            continue;
+                        }
+                        if($i==3){
+                            echo '<li></li>';
+                        }
+                        $js =$i-$con;
+                        echo <<<EOM
+                        <li> <!-- [▼] アイテム -->
+                            <form action="../syop/syohinsyousai.php" name="form1" method="post">   
+                                <a href="javascript:form1[0].submit()">
+                                    <img src="../admin_kari/img/item/{$ke['image_name']}" {$size} class="image">
+                                    <p class="name">{$ke['item_name']}</p>
+                                    <p class="item_date" >{$data}</p>
+                                    <p class="price">&yen;{$ke['price']}</p>
+                                    
+                                </a>  
+                                <input type="hidden" name="item_name" value="{$ke['item_name']}">
+                            </form>
+                         </li> <!-- [▲] アイテム -->
+                        EOM;
+                        $i++;
+                    }
+
+                    ?>
                 </ul>
-
-
             </div>
         </div>
-
-
-
-
-
-
-
+</main>
     <script src="script/script2.js"></script>
 </body>
 </html>
